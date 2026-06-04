@@ -1,0 +1,2967 @@
+[
+    {
+        "id": "avvia",
+        "content": [
+            "text: Hey! Si v Nova Gorici, kaj?",
+            "text: Povej mi, komaj čakam, da te slišim!"
+        ],
+        "ai_fallback": {
+            "prompt": "Če uporabnik odgovori z nečim, kar potrjuje njegovo prisotnost ali zanimanje, nadaljuj z 'risposta_libera_1'. V nasprotnem primeru ga vljudno prosi, da odgovori z da",
+            "next_node": "risposta_libera_1"
+        }
+    },
+    {
+        "id": "risposta_libera_1",
+        "content": [
+            "text: ✌️",
+            "text: Kako si? Se sproščaš?"
+        ],
+        "ai_fallback": {
+            "prompt": "Lomiš led. Ni pomembno, ali je uporabnik pod stresom ali vesel. Počakaj, da uporabnik odgovori na tvoje vprašanje",
+            "next_node": "risposta_libera_2"
+        }
+    },
+    {
+        "id": "risposta_libera_2",
+        "content": [
+            "text: Super sem in imam strašno novico!",
+            "text: Najprej… malo tehničnih stvari!",
+            "text: Uporabili bomo to platformo za komunikacijo: bo nam pomagala hitreje deliti informacije.",
+            "text: Enostavno je za uporabo: praktično izbereš in klikneš. Poskusi, šef!",
+            "text: ⬇️⬇️⬇️"
+        ],
+        "choices": [
+            {
+                "0": "Razumem",
+                "next_node": "bottone_1a"
+            },
+            {
+                "1": "Ne kličite me \"šef\"",
+                "next_node": "bottone_1b"
+            }
+        ]
+    },
+    {
+        "id": "bottone_1a",
+        "content": [
+            "text: Odlično!"
+        ],
+        "open": {
+            "next_node": "bottone_2"
+        }
+    },
+    {
+        "id": "bottone_1b",
+        "content": [
+            "text: ... Kot pravite, šef. 😏"
+        ],
+        "open": {
+            "next_node": "bottone_2"
+        }
+    },
+    {
+        "id": "bottone_2",
+        "content": [
+            "text: Imaš slušalke? Namesti jih, da ti pošlem glasovno sporočilo!",
+            "text: Prosim, poslušaj vse pozorno, ker te bom presenetil!",
+            "audio: VOCALE_1.mp3",
+            "text: Si tukaj?"
+        ],
+        "choices": [
+            {
+                "0": "Pojdi!",
+                "next_node": "bottone_3"
+            }
+        ]
+    },
+    {
+        "id": "bottone_3",
+        "content": [
+            "audio: VOCALE_2.mp3",
+            "text: 🕵️‍♂️"
+        ],
+        "choices": [
+            {
+                "0": "Kako veš to?",
+                "next_node": "bottone_4"
+            },
+            {
+                "1": "Branca Detective?",
+                "next_node": "bottone_4"
+            },
+            {
+                "2": "Nikoli slišal",
+                "next_node": "bottone_4"
+            },
+            {
+                "3": "Kot nogometaš iz 90-ih?",
+                "next_node": "bottone_4"
+            }
+        ]
+    },
+    {
+        "id": "bottone_4",
+        "content": [
+            "text: Poglej tukaj!",
+            "image: shared/02 branca detective.jpg"
+        ],
+        "choices": [
+            {
+                "0": "Neverjetno!",
+                "next_node": "bottone_5"
+            },
+            {
+                "1": "Kakšna...bizarna naključnost!",
+                "next_node": "bottone_5"
+            },
+            {
+                "2": "Zelo profesionalno...",
+                "next_node": "bottone_5"
+            },
+            {
+                "3": "😳",
+                "next_node": "bottone_5"
+            }
+        ]
+    },
+    {
+        "id": "bottone_5",
+        "content": [
+            "text: Res? Ampak je še več! Pošiljam glasovno sporočilo!",
+            "audio: VOCALE_3.mp3"
+        ],
+        "choices": [
+            {
+                "0": "Pošlji!",
+                "next_node": "bottone_7"
+            }
+        ]
+    },
+    {
+        "id": "bottone_7",
+        "content": [
+            "image: 03 giornali sul tavolo SL.jpg",
+            "text: Tukaj je različica, ki jo lahko pregledaš s prevodi primera (naj živi avtomatsko prevajanje!).",
+            "pdf: 04 rassegna stampa SL.pdf",
+            "text: Sporoči mi, ko boš prebral!"
+        ],
+        "choices": [
+            {
+                "0": "Prebral sem vse",
+                "next_node": "bottone_8"
+            },
+            {
+                "1": "Kaj me želiš vprašati?",
+                "next_node": "bottone_8"
+            },
+            {
+                "2": "🫣",
+                "next_node": "bottone_8"
+            }
+        ]
+    },
+    {
+        "id": "bottone_8",
+        "content": [
+            "audio: VOCALE_4.mp3",
+            "image: shared/05 branca e milli.jpg"
+        ],
+        "choices": [
+            {
+                "0": "Kdo je ta z njim?",
+                "next_node": "bottone_11"
+            }
+        ]
+    },
+    {
+        "id": "bottone_11",
+        "content": [
+            "text: Milena, njegova asistentka, ki jo je klical Milli…",
+            "text: Tako mi zdi, da sem to razbral iz različnih zapiskov, ki sem jih našel po pisarni."
+        ],
+        "choices": [
+            {
+                "0": "Zdi se, da ve svoje",
+                "next_node": "bottone_12a"
+            },
+            {
+                "1": "Tip... slikovit",
+                "next_node": "bottone_12a"
+            },
+            {
+                "2": "Nizko cenovni kapitan Colombo",
+                "next_node": "bottone_12a"
+            },
+            {
+                "3": "Kakšna navadna oseba",
+                "next_node": "bottone_12b"
+            }
+        ]
+    },
+    {
+        "id": "bottone_12a",
+        "content": [
+            "text: Ahahahaha! Strinjam se! In ti bom pustil… njegov glas!"
+        ],
+        "open": {
+            "next_node": "bottone_13"
+        }
+    },
+    {
+        "id": "bottone_12b",
+        "content": [
+            "text: Tako praviš? Moral bi slišati njegov glas!"
+        ],
+        "open": {
+            "next_node": "bottone_13"
+        }
+    },
+    {
+        "id": "bottone_13",
+        "content": [
+            "text: Milli je ohranila kasete telefonske poštne službe, ki jih je uporabljal za posodabljanje o preiskavah… to so bili drugi časi, šef, niso imeli vse naše tehnologije… pozabite na glasovna sporočila, ki ti jih pošiljam jaz!",
+            "text: \"Kratek\" glasovna sporočila, ki jih tako cenite...",
+            "text: Predvajaj!",
+            "text: ▶️▶️▶️",
+            "audio: VOCALE_5.mp3",
+            "text: Kaj praviš?"
+        ],
+        "choices": [
+            {
+                "0": "Nekaj ni v redu.",
+                "next_node": "bottone_18a"
+            },
+            {
+                "1": "Kaj čudno!",
+                "next_node": "bottone_18a"
+            },
+            {
+                "2": "Branca jo je iskal... in jo ubil?",
+                "next_node": "bottone_18a"
+            },
+            {
+                "3": "Ker sem na dopustu.",
+                "next_node": "bottone_18b"
+            }
+        ]
+    },
+    {
+        "id": "bottone_18a",
+        "content": [
+            "text: Prav! Stvari niso v redu, šef, še posebej ker je bila preiskava že zaključena!"
+        ],
+        "open": {
+            "next_node": "bottone_20"
+        }
+    },
+    {
+        "id": "bottone_18b",
+        "content": [
+            "text: Vem, zato ti delim te zanimive zgodbe! Da ti odmaknem malo glavo od dela, šef! 😂"
+        ],
+        "open": {
+            "next_node": "bottone_20"
+        }
+    },
+    {
+        "id": "bottone_20",
+        "content": [
+            "text: Poslušaj, kako napreduje!",
+            "audio: VOCALE_6_01.mp3",
+            "audio: VOCALE_6_02.mp3",
+            "audio: VOCALE_6_03.mp3",
+            "audio: VOCALE_6_04.mp3",
+            "text: Ampak..."
+        ],
+        "choices": [
+            {
+                "0": "Kaj?",
+                "next_node": "bottone_21"
+            },
+            {
+                "1": "Strah me je...",
+                "next_node": "bottone_21"
+            },
+            {
+                "2": "🤐",
+                "next_node": "bottone_21"
+            }
+        ]
+    },
+    {
+        "id": "bottone_21",
+        "content": [
+            "text: Obstaja še ena kaseta.",
+            "text: Poslušaj jo in potem mi povej, kaj misliš.",
+            "audio: VOCALE_7_01.mp3",
+            "audio: VOCALE_7_02.mp3",
+            "text: Pojdi že!!! 👼🥺"
+        ],
+        "choices": [
+            {
+                "0": " V redu! Naredimo to!",
+                "next_node": "bottone_29"
+            },
+            {
+                "1": "😑 Pokvarimo počitnice...",
+                "next_node": "bottone_29"
+            },
+            {
+                "2": "Tako? Pro Bono?",
+                "next_node": "bottone_31"
+            },
+            {
+                "3": "Iskreno? Nimam volje.",
+                "next_node": "bottone_32"
+            }
+        ]
+    },
+    {
+        "id": "bottone_31",
+        "content": [
+            "text: Da, ampak za plemeniti cilj pravice. ⚖️",
+            "text: Kot Avengers…",
+            "text: Torej?"
+        ],
+        "choices": [
+            {
+                "0": " V redu! Naredimo to!",
+                "next_node": "bottone_29"
+            },
+            {
+                "1": "Ne. To je moj končni odgovor.",
+                "next_node": "bottone_33"
+            }
+        ]
+    },
+    {
+        "id": "bottone_32",
+        "content": [
+            "text: Šef! Poglej, to je pomembna zadeva! Imamo čast naše kategorije, ki jo moramo braniti! Sosednji detektiv in mi vemo, da je bil verjetno vpleten v sumljivo zadevo… Ali res želiš odnehati?"
+        ],
+        "choices": [
+            {
+                "0": " V redu! Naredimo to!",
+                "next_node": "bottone_29"
+            },
+            {
+                "1": "Ne. To je moj končni odgovor.",
+                "next_node": "bottone_33"
+            }
+        ]
+    },
+    {
+        "id": "bottone_33",
+        "content": [
+            "text: V redu, nisem te uspela povleči v to avanturo.",
+            "text: Žalost? Jaz? Seveda ne!",
+            "text: ...",
+            "text: Ni problema...",
+            "text: ...",
+            "text: (prinesi mi kaj, zdaj ko se vrneš z dopusta, ključe nove pisarne… še jih nimaš)",
+            "text: 💀⚰️💀⚰️💀⚰️💀"
+        ],
+        "choices": [
+            {
+                "0": "Diana... 🙄",
+                "next_node": "bottone_34"
+            },
+            {
+                "1": " Obožujem tvoje drobne lobanje.",
+                "next_node": "bottone_34"
+            },
+            {
+                "2": "Presenetil te bom.",
+                "next_node": "bottone_34"
+            }
+        ]
+    },
+    {
+        "id": "bottone_34",
+        "content": [
+            "text: ❤️",
+            "text: Šala, šef!",
+            "text: Srečne odkritve v Nova Gorici!",
+            "text: Primer zaključen?"
+        ],
+        "choices": [
+            {
+                "0": "Primer zaključen.",
+                "next_node": "bottone_300"
+            }
+        ]
+    },
+    {
+        "id": "bottone_300",
+        "content": [
+            "text: 🎊 THE END 🎊",
+            "text: Hvala, da ste sodelovali v Nova Gorica Cold Case!",
+            "audio: sigla_sl.mp3",
+            "text: Concept, dramaturgija Stefano Beghi in Riccardo Tabilio",
+            "text: Razvoj programske opreme Marco Prestigiacomo",
+            "text: Glasovi Emanuele Arrigazzi, Peter Harl, Patrizia Jurinčič Finžgar, Anuša Kodelja, Susanna Miotto, Alice Pavan",
+            "text: in Riccardo Tabilio, Margherita Squaiella, David Kožuh, Rok Bavčar",
+            "text: Grafika Riccardo Tabilio in Midjourney",
+            "text: Zvočni dizajn in originalna glasba Stefano Beghi in Suno",
+            "text: Prevodi Janja Zavrtanik",
+            "text: Umetniški projekt Officina Carbonara",
+            "text: Produkcija Karakorum S.R.L. Socialno podjetje in Quarantasettezeroquattro",
+            "text: V sodelovanju z Goriški Muzej Nova Gorica",
+            "text: RA – Realtà aumentate / Obogatene resničnosti",
+            "text: Projekt financira Evropska unija iz Sklada za male projekte GO! 2025 Programa Interreg VI-A Italija-Slovenija 2021-2027, ki ga upravlja EZTS GO.",
+            "text: INFO www.euro-go.eu/it/ | www.ita-slo.eu/it",
+            "text: Zgodba, pripovedana v Nova Gorica Cold Case, je izmišljena, čeprav je postavljena v zgodovino z veliko začetnico: dogodki, liki in dokumenti, predstavljeni, naj se štejejo za plod ustvarjalnosti avtorjev."
+        ],
+        "choices": [
+            {
+                "0": "Povej nam, kako je bilo tvoje izkušnja.",
+                "next_node": "bottone_301"
+            },
+            {
+                "1": "Spoznaj nas.",
+                "next_node": "bottone_302"
+            },
+            {
+                "2": "Ugotovi, kaj početi v Nova Gorici.",
+                "next_node": "bottone_303"
+            },
+            {
+                "3": "Obiščite Goriški Muzej.",
+                "next_node": "bottone_304"
+            }
+        ]
+    },
+    {
+        "id": "bottone_301",
+        "content": [
+            "text: Povej nam, kako je šlo, tukaj!",
+            "text: https://docs.google.com/forms/d/e/1FAIpQLSe3rmrOO7Kk0-nANmVxYF_f_I3mrUdPWvFtek59JiRem625Kw/viewform"
+        ],
+        "choices": [
+            {
+                "0": "Povej nam, kako je bilo tvoje izkušnja.",
+                "next_node": "bottone_301"
+            },
+            {
+                "1": "Spoznaj nas.",
+                "next_node": "bottone_302"
+            },
+            {
+                "2": "Ugotovi, kaj početi v Nova Gorici.",
+                "next_node": "bottone_303"
+            },
+            {
+                "3": "Obiščite Goriški Muzej.",
+                "next_node": "bottone_304"
+            }
+        ]
+    },
+    {
+        "id": "bottone_302",
+        "content": [
+            "text: Obiščite naše spletne strani!",
+            "text: www.officinacarbonara.eu",
+            "text: www.invisiblecities.it"
+        ],
+        "choices": [
+            {
+                "0": "Povej nam, kako je bilo tvoje izkušnja.",
+                "next_node": "bottone_301"
+            },
+            {
+                "1": "Spoznaj nas.",
+                "next_node": "bottone_302"
+            },
+            {
+                "2": "Ugotovi, kaj početi v Nova Gorici.",
+                "next_node": "bottone_303"
+            },
+            {
+                "3": "Obiščite Goriški Muzej.",
+                "next_node": "bottone_304"
+            }
+        ]
+    },
+    {
+        "id": "bottone_303",
+        "content": [
+            "text: Oglej si tukaj!",
+            "text: https://www.go2025.eu"
+        ],
+        "choices": [
+            {
+                "0": "Povej nam, kako je bilo tvoje izkušnja.",
+                "next_node": "bottone_301"
+            },
+            {
+                "1": "Spoznaj nas.",
+                "next_node": "bottone_302"
+            },
+            {
+                "2": "Ugotovi, kaj početi v Nova Gorici.",
+                "next_node": "bottone_303"
+            },
+            {
+                "3": "Obiščite Goriški Muzej.",
+                "next_node": "bottone_304"
+            }
+        ]
+    },
+    {
+        "id": "bottone_304",
+        "content": [
+            "text: Tukaj je spletna stran Goriški Muzej:",
+            "text: https://goriskimuzej.si/it"
+        ],
+        "choices": [
+            {
+                "0": "Povej nam, kako je bilo tvoje izkušnja.",
+                "next_node": "bottone_301"
+            },
+            {
+                "1": "Spoznaj nas.",
+                "next_node": "bottone_302"
+            },
+            {
+                "2": "Ugotovi, kaj početi v Nova Gorici.",
+                "next_node": "bottone_303"
+            },
+            {
+                "3": "Obiščite Goriški Muzej.",
+                "next_node": "bottone_304"
+            }
+        ]
+    },
+    {
+        "id": "bottone_29",
+        "content": [
+            "text: Si fenomen, šef! 🎉",
+            "text: Obožujem te!",
+            "text: Si moj idol!",
+            "text: Morda v kopalnici obesimo plakat s tvojo gigantografijo, namesto Creedence!",
+            "text: 😆",
+            "text: Delo, potem! Pošiljam glasovno sporočilo!",
+            "audio: VOCALE_8.mp3",
+            "text: Tukaj so koordinate!",
+            "map: 45.954940972992574, 13.645351568155807",
+            "audio: VOCALE_9_01.mp3",
+            "audio: VOCALE_9_02.mp3",
+            "audio: VOCALE_9_03.mp3",
+            "text: Ko dosežeš lokacijo, mi sporoči!"
+        ],
+        "choices": [
+            {
+                "0": "Sem tukaj!",
+                "next_node": "bottone_36b"
+            }
+        ]
+    },
+    {
+        "id": "bottone_36b",
+        "content": [
+            "text: Bravo, šef! Zaslužiš si nagrado! Pošiljam ti sliko Branca partizana.",
+            "image: 06 partigiani SL.jpg",
+            "text: Vendar mi pošlji tudi ti sliko!",
+            "text: Radovedna sem, kje je bilo mesto zločina 🚔",
+            "text: (Veš, kako se to naredi, kajne?)"
+        ],
+        "choices": [
+            {
+                "0": "Da, nisem tako boomer...",
+                "next_node": "bottone_36c"
+            },
+            {
+                "1": "Bolje, če mi pojasniš.",
+                "next_node": "bottone_36d"
+            }
+        ]
+    },
+    {
+        "id": "bottone_36c",
+        "content": [
+            "text: Pošlji foto, potem! Radovedna sem!"
+        ],
+        "ai_fallback": {
+            "prompt": "Uporabnik ti mora poslati foto lokacije zločina.",
+            "succes_condition": "Uporabnik mora poslati foto. Počakaj, da pošlje foto, preden greš na naslednji vozlišče.",
+            "next_node": "invio_di_una_foto"
+        }
+    },
+    {
+        "id": "bottone_36d",
+        "content": [
+            "text: Tukaj!",
+            "video: video_tutorial_foto.mp4",
+            "text: Čakam na tvojo foto!"
+        ],
+        "ai_fallback": {
+            "prompt": "Uporabnik ti mora poslati foto lokacije zločina.",
+            "succes_condition": "Uporabnik mora poslati foto. Počakaj, da pošlje foto, preden greš na naslednji vozlišče.",
+            "next_node": "invio_di_una_foto"
+        }
+    },
+    {
+        "id": "invio_di_una_foto",
+        "content": [
+            "text: Hvala, šef! Shranim v arhiv",
+            "text: Kakšno mesto!",
+            "text: 😬",
+            "text: Del dela me bo spraševala, ali želiš iti notri in vprašati “Lahko dobim informacije o umoru, ki ste ga imeli tukaj v letu 1990?” …"
+        ],
+        "choices": [
+            {
+                "0": "☠️ DIANA!!! ☠️",
+                "next_node": "bottone_37a"
+            },
+            {
+                "1": "Nikoli, nikoli.",
+                "next_node": "bottone_37b"
+            },
+            {
+                "0": "Ne mislim, da se splača.",
+                "next_node": "bottone_37c"
+            },
+            {
+                "3": " To ni moj stil, draga. 🕵️",
+                "next_node": "bottone_37d"
+            }
+        ]
+    },
+    {
+        "id": "bottone_37a",
+        "content": [
+            "text: Ahahahaah! ☠️"
+        ],
+        "open": {
+            "next_node": "bottone_40"
+        }
+    },
+    {
+        "id": "bottone_37b",
+        "content": [
+            "text: Šala sem, šef!"
+        ],
+        "open": {
+            "next_node": "bottone_40"
+        }
+    },
+    {
+        "id": "bottone_37c",
+        "content": [
+            "text: Res."
+        ],
+        "open": {
+            "next_node": "bottone_40"
+        }
+    },
+    {
+        "id": "bottone_37d",
+        "content": [
+            "text: 💛"
+        ],
+        "open": {
+            "next_node": "bottone_40"
+        }
+    },
+    {
+        "id": "bottone_40",
+        "content": [
+            "text: Morda pa vstopi. Zakaj ne? Ti je neprijetno? Pretvarjaj se, da si na telefonu!",
+            "text: (Stari trik, da se ne napade gumb.)",
+            "text: Morda bo dihanje atmosfere iz kazinoja pomagalo, da dobimo idejo o primeru… Vstopi, prosim! Vsaj v hol!",
+            "text: Medtem ti povem dve stvari, ki sem jih odkrila.",
+            "audio: VOCALE_10.mp3"
+        ],
+        "choices": [
+            {
+                "0": "Je še kaj?",
+                "next_node": "bottone_43"
+            }
+        ]
+    },
+    {
+        "id": "bottone_43",
+        "content": [
+            "audio: VOCALE_11.mp3",
+            "text: Si notri?"
+        ],
+        "choices": [
+            {
+                "0": "Da.",
+                "next_node": "bottone_44"
+            },
+            {
+                "1": "NE VSTOPIM!",
+                "next_node": "bottone_45"
+            }
+        ]
+    },
+    {
+        "id": "bottone_44",
+        "content": [
+            "text: Prosim, pošlji glasovno sporočilo in mi povej svoje vtise. Si se že zgodil takšen kazino v Nova Gorici?",
+            "text: Ali že poznaš to mesto? ♥️♣️♦️♠️ 📉 💸💸💸",
+            "text: Če greš ven… ne želim, da te slišijo."
+        ],
+        "ai_fallback": {
+            "prompt": "Uporabnik ti mora poslati glasovno sporočilo.",
+            "succes_condition": "Uporabnik mora poslati glasovno sporočilo. Počakaj, da pošlje glasovno sporočilo, preden greš na naslednji vozlišče.",
+            "next_node": "invio_di_un_messaggio_vocale"
+        }
+    },
+    {
+        "id": "invio_di_un_messaggio_vocale",
+        "content": [
+            "text: Heh! Razumel, šef!",
+            "text: Poskusimo si predstavljati, kaj se je zgodilo Branci.",
+            "text: V katero smer je morda pobegnil?",
+            "text: Kje se je morda skril?!",
+            "text: Vstopimo v situacijo! Ja, v tvem slogu detektiva Cooperja!… Ali pa je to bila Jessica Fletcher? 🤔",
+            "image: shared/07 hotel park.jpg",
+            "text: V časopisnih člankih je ta slika. ⬆️⬆️⬆️",
+            "text: Članki o umoru pravijo, da je skočil s prvega nadstreška.",
+            "text: Park se je v vseh teh letih precej spremenil. Mogoče je izvirni jedro hotela še vidno z neke strani. In morda je še vedno nadstrešek, s katerega je Branca pobegnil!",
+            "text: Poskusi najti ga!"
+        ],
+        "choices": [
+            {
+                "0": "Najdeno!",
+                "next_node": "bottone_47"
+            },
+            {
+                "1": "Ni najdeno...",
+                "next_node": "bottone_48"
+            }
+        ]
+    },
+    {
+        "id": "bottone_45",
+        "content": [
+            "text: Uff…",
+            "text: Poskusimo si predstavljati, kaj se je zgodilo Branci.",
+            "text: V katero smer je morda pobegnil?",
+            "text: Kje se je morda skril?!",
+            "text: Vstopimo v situacijo! Ja, v tvem slogu detektiva Cooperja!… Ali pa je to bila Jessica Fletcher? 🤔",
+            "image: shared/07 hotel park.jpg",
+            "text: V časopisnih člankih je ta slika. ⬆️⬆️⬆️",
+            "text: Članki o umoru pravijo, da je skočil s prvega nadstreška.",
+            "text: Park se je v vseh teh letih precej spremenil. Mogoče je izvirni jedro hotela še vidno z neke strani. In morda je še vedno nadstrešek, s katerega je Branca pobegnil!",
+            "text: Poskusi najti ga!"
+        ],
+        "choices": [
+            {
+                "0": "Najdeno!",
+                "next_node": "bottone_47"
+            },
+            {
+                "1": "Ni najdeno...",
+                "next_node": "bottone_48"
+            }
+        ]
+    },
+    {
+        "id": "bottone_47",
+        "content": [
+            "text: Hitro: pošlji mi sliko! 📸"
+        ],
+        "ai_fallback": {
+            "prompt": "Uporabnik ti mora poslati fotografijo o tem, kar je našel na sliki hotel_park.jpg v časopisnih člankih.",
+            "succes_condition": "Uporabnik mora poslati fotografijo. Počakaj, da pošlje fotografijo, preden nadaljuješ na naslednji vozlišče.",
+            "next_node": "invio_di_una_foto_2"
+        }
+    },
+    {
+        "id": "invio_di_una_foto_2",
+        "content": [
+            "text: Hvala, šef! Spravim v arhiv",
+            "text: Lahko gre!",
+            "text: Odličen zadetek, šef!",
+            "audio: VOCALE_12.mp3",
+            "text: Ops... mislim, da sem naredil zmedo..."
+        ],
+        "choices": [
+            {
+                "0": " DIANA?",
+                "next_node": "bottone_49"
+            },
+            {
+                "1": "Si že razbil nov urad?",
+                "next_node": "bottone_49"
+            },
+            {
+                "2": "Si v redu?",
+                "next_node": "bottone_49"
+            },
+            {
+                "3": "😐",
+                "next_node": "bottone_49"
+            }
+        ]
+    },
+    {
+        "id": "bottone_48",
+        "content": [
+            "text: Škoda. Potem je vse spremenjeno. Ampak poskusimo slediti z domišljijo.",
+            "audio: VOCALE_12.mp3",
+            "text: Ops... mislim, da sem naredil zmedo..."
+        ],
+        "choices": [
+            {
+                "0": " DIANA?",
+                "next_node": "bottone_49"
+            },
+            {
+                "1": "Si že razbil nov urad?",
+                "next_node": "bottone_49"
+            },
+            {
+                "2": "Si v redu?",
+                "next_node": "bottone_49"
+            },
+            {
+                "3": "😐",
+                "next_node": "bottone_49"
+            }
+        ]
+    },
+    {
+        "id": "bottone_49",
+        "content": [
+            "image: shared/08 doppiofondo.jpg",
+            "text: Vse v redu, šef. Pošiljam glasovno sporočilo!",
+            "audio: VOCALE_13.mp3",
+            "text: ⁉️"
+        ],
+        "choices": [
+            {
+                "0": "Ime sem že slišal!",
+                "next_node": "bottone_107"
+            },
+            {
+                "1": "Nič mi ne sporoča.",
+                "next_node": "bottone_107"
+            }
+        ]
+    },
+    {
+        "id": "bottone_107",
+        "content": [
+            "text: Ja. To je najljubši nogometaš Brance. Kaj ne?",
+            "image: shared/09 luca fusi.jpg",
+            "text: ⬆️ On? ⬆️",
+            "audio: VOCALE_14.mp3",
+            "text: Dajmo pogled?"
+        ],
+        "choices": [
+            {
+                "0": "In me sprašuješ?",
+                "next_node": "bottone_109a"
+            },
+            {
+                "1": "No, ja.",
+                "next_node": "bottone_109a"
+            },
+            {
+                "2": "😒 Genij… Kaj veš",
+                "next_node": "bottone_109a"
+            },
+            {
+                "3": "Ja, a umiri se.",
+                "next_node": "bottone_109b"
+            }
+        ]
+    },
+    {
+        "id": "bottone_109a",
+        "content": [
+            "text: Odprlo!"
+        ],
+        "open": {
+            "next_node": "bottone_112"
+        }
+    },
+    {
+        "id": "bottone_109b",
+        "content": [
+            "text: 😡 ŠEF!!! 😡"
+        ],
+        "open": {
+            "next_node": "bottone_112"
+        }
+    },
+    {
+        "id": "bottone_112",
+        "content": [
+            "audio: VOCALE_15.mp3",
+            "text: Pošlji sliko?"
+        ],
+        "choices": [
+            {
+                "0": "Pojdi!",
+                "next_node": "bottone_113"
+            }
+        ]
+    },
+    {
+        "id": "bottone_113",
+        "content": [
+            "image: shared/10 mappa strappata.jpg",
+            "text: To je… nekakšna karta. Ampak je pocepana!",
+            "text: In zgoraj desno je … abeceda?",
+            "audio: VOCALE_16.mp3",
+            "text: Ah! Če želiš vzeti si čas, preden se podaš v preiskavo, kar storijo.",
+            "text: To je dober trenutek za odmor. ☕",
+            "text: Pravzaprav, če želiš prekinitev preiskave in se morda vrniti kasneje, s svežo glavo (ali tudi jutri!) sem tukaj.",
+            "text: V novem uradu je veliko dela! 👩‍🎨🧰👩‍🎨🏗️"
+        ],
+        "choices": [
+            {
+                "0": "Potrebno je nekaj počitka.",
+                "next_node": "bottone_113a"
+            },
+            {
+                "1": "Če si ti tukaj, sem tudi jaz!",
+                "next_node": "bottone_113b"
+            }
+        ]
+    },
+    {
+        "id": "bottone_113a",
+        "content": [
+            "text: In kako naj ti zamerim: ta preiskava se obeta zapletena… bolje jo reši s svežo glavo in trdnimi nogami!",
+            "text: Vzemi si ves čas, ki ga potrebuješ: sem vedno na voljo, šef, tudi ponoči!",
+            "text: Ko si tukaj, sporoči!"
+        ],
+        "choices": [
+            {
+                "0": "Zdaj sem tukaj. Začnimo znova!",
+                "next_node": "bottone_113c"
+            }
+        ]
+    },
+    {
+        "id": "bottone_113c",
+        "content": [
+            "text: Evvaaaiiii 🚀🚀🚀",
+            "text: Nisem te želel spraviti v naglico (saj si že na dopustu), ampak tukaj komaj čakam, da odkrijem, kaj se je zgodilo!!!"
+        ],
+        "open": {
+            "next_node": "MENU_OPZIONI_ABCD"
+        },
+        "openNext": "MENU_OPZIONI_ABCD"
+    },
+    {
+        "id": "bottone_113b",
+        "content": [
+            "text: Odlično!"
+        ],
+        "open": {
+            "next_node": "MENU_OPZIONI_ABCD"
+        },
+        "openNext": "MENU_OPZIONI_ABCD"
+    },
+    {
+        "id": "MENU_OPZIONI_ABCD",
+        "content": [
+            "text: Kje začnemo?"
+        ],
+        "choices": [
+            {
+                "0": "Moramo slediti Evo.",
+                "next_node": "a)_prima_linea:_eva"
+            },
+            {
+                "1": "Ti Rozental ni všeč…",
+                "next_node": "b)_seconda_linea:_rozental"
+            },
+            {
+                "2": "Kaj je označeno območje?",
+                "next_node": "c)_terza_linea:_ruski_bloki"
+            },
+            {
+                "3": "Ti odloči …",
+                "next_node": "bottone_d"
+            }
+        ]
+    },
+    {
+        "id": "bottone_bca_cba",
+        "content": [
+            "text: Kdo ve…",
+            "text: Postaja vse bolj jasno, da se celotna zgodba vrti okoli njene zgodbe, njene preteklosti… ampak je vse preveč zmedeno…"
+        ],
+        "choices": [
+            {
+                "0": "Poskusimo združiti koščke",
+                "next_node": "a)_prima_linea:_eva"
+            }
+        ]
+    },
+    {
+        "id": "a)_prima_linea:_eva",
+        "content": [
+            "audio: VOCALE_21.mp3",
+            "text: Tukaj so koordinate!",
+            "map: 45.958617043379476, 13.64888022387638",
+            "audio: VOCALE_22_01.mp3",
+            "audio: VOCALE_22_02.mp3",
+            "audio: VOCALE_22_03.mp3",
+            "audio: VOCALE_22_04.mp3",
+            "audio: VOCALE_22_05.mp3",
+            "audio: VOCALE_22_06.mp3"
+        ],
+        "choices": [
+            {
+                "0": "Tukaj sem!",
+                "next_node": "bottone_a123"
+            }
+        ]
+    },
+    {
+        "id": "bottone_a123",
+        "content": [
+            "text: Super! Pošlji mi sliko!"
+        ],
+        "ai_fallback": {
+            "prompt": "Uporabnik ti mora poslati sliko.",
+            "succes_condition": "Uporabnik mora poslati sliko. Počakaj, da pošlje sliko, preden nadaljuješ na naslednji vozlišče.",
+            "next_node": "invio_foto"
+        }
+    },
+    {
+        "id": "invio_foto",
+        "content": [
+            "text: Hvala, šef! Spravim v arhiv",
+            "text: Popolnoma drugače kot je bilo! Glej!",
+            "image: shared/14 hotel argonavti.jpg",
+            "text: Tako je izgledal hotel Argonavti v osemdesetih… v času primera verjetno ni bil zelo drugačen… mogoče je bil malo slabše… Branca v svoji sporočilu na glasovnem posnetku je rekel Milli, da je bil že zaprt leta 1990.",
+            "text: Pošiljam glasovno sporočilo…",
+            "audio: VOCALE_23.mp3",
+            "text: 🎰"
+        ],
+        "choices": [
+            {
+                "0": "Jasno.",
+                "next_node": "bottone_a124"
+            }
+        ]
+    },
+    {
+        "id": "bottone_a124",
+        "content": [
+            "audio: VOCALE_24_01.mp3",
+            "audio: VOCALE_24_02.mp3",
+            "text: 🛠"
+        ],
+        "choices": [
+            {
+                "0": "Zakaj ne dinamit?",
+                "next_node": "bottone_a125"
+            },
+            {
+                "1": "Pazi, da se ne poškoduješ…",
+                "next_node": "bottone_a126"
+            },
+            {
+                "2": "Preizkusimo kombinacijo?",
+                "next_node": "bottone_a127"
+            },
+            {
+                "3": "Ti… vrtalnik?",
+                "next_node": "bottone_a126"
+            }
+        ]
+    },
+    {
+        "id": "bottone_a125",
+        "content": [
+            "text: Ni preveč?",
+            "image: shared/33 diana trapano.jpg",
+            "text: Ampak…",
+            "text: Me res posmehuješ??!??!?! 🤬",
+            "text: 🤬🤬🤬",
+            "text: Sporocilo prejeto… 😓",
+            "text: Poskusimo kombinacijo?",
+            "text: Kaj naj dammmm???????",
+            "text: 😤",
+            "text: Pošiljam glasovno sporočilo.",
+            "audio: VOCALE_25.mp3",
+            "text: Kaj? Ideje kdo bi to lahko bil?",
+            "text: IN POGLEJ, DA NE ZMEŠČIŠ, DA SEM NA TAKŠEN DRŽAVNI KOT! SAMO VNESI IME! JASNO?????"
+        ],
+        "choices": [
+            {
+                "0": "Ok, oprosti.",
+                "next_node": "bottone_a128"
+            },
+            {
+                "1": "Nervozno?",
+                "next_node": "bottone_a128"
+            },
+            {
+                "2": "😶‍🌫️",
+                "next_node": "bottone_a128"
+            },
+            {
+                "3": "Jel je pojedel kruh in nežnost?",
+                "next_node": "bottone_a128"
+            }
+        ]
+    },
+    {
+        "id": "bottone_a126",
+        "content": [
+            "text: Naredil sem še huje v tem uradu v zadnjih dveh tednih – in brez tvoje pomoči! Tako… 🤫",
+            "image: shared/33 diana trapano.jpg",
+            "text: Ampak… mislim, da je brezupno: je precej debela. Poskusimo kombinacijo?",
+            "text: Kaj naj dammmm???????",
+            "text: 😤",
+            "text: Pošiljam glasovno sporočilo.",
+            "audio: VOCALE_25.mp3",
+            "text: Kaj? Ideje kdo bi to lahko bil?",
+            "text: IN POGLEJ, DA NE ZMEŠČIŠ, DA SEM NA TAKŠEN DRŽAVNI KOT! SAMO VNESI IME! JASNO?????"
+        ],
+        "choices": [
+            {
+                "0": "Ok, oprosti.",
+                "next_node": "bottone_a128"
+            },
+            {
+                "1": "Nervozno?",
+                "next_node": "bottone_a128"
+            },
+            {
+                "2": "😶‍🌫️",
+                "next_node": "bottone_a128"
+            },
+            {
+                "3": "Jel je pojedel kruh in nežnost?",
+                "next_node": "bottone_a128"
+            }
+        ]
+    },
+    {
+        "id": "bottone_a127",
+        "content": [
+            "text: 😁",
+            "image: shared/33 diana trapano.jpg",
+            "text: Kaj naj dammmm???????",
+            "text: 😤",
+            "text: Pošiljam glasovno sporočilo.",
+            "audio: VOCALE_25.mp3",
+            "text: Kaj? Ideje kdo bi to lahko bil?",
+            "text: IN POGLEJ, DA NE ZMEŠČIŠ, DA SEM NA TAKŠEN DRŽAVNI KOT! SAMO VNESI IME! JASNO?????"
+        ],
+        "choices": [
+            {
+                "0": "Ok, oprosti.",
+                "next_node": "bottone_a128"
+            },
+            {
+                "1": "Nervozno?",
+                "next_node": "bottone_a128"
+            },
+            {
+                "2": "😶‍🌫️",
+                "next_node": "bottone_a128"
+            },
+            {
+                "3": "Jel je pojedel kruh in nežnost?",
+                "next_node": "bottone_a128"
+            }
+        ]
+    },
+    {
+        "id": "bottone_a128",
+        "content": [
+            "text: Napiši ime \"starodavnega sopotnika\" Brance! Gremo!"
+        ],
+        "validation": {
+            "accepted_answers": [
+                "tito",
+                "josip",
+                "broz"
+            ],
+            "correct_node": "risposta_corretta",
+            "fallback_node": "nodo_aiuto_tito",
+            "max_attempts": 3,
+            "error_messages": [
+                "text: Mmm... ne zveni prav. Poskusi znova!",
+                "text: Skoraj... pomisli na vodjo Jugoslavije.",
+                "text: Ime je v zgodovini kraja. Kdo je bil partizanski vodja?"
+            ]
+        }
+    },
+    {
+        "id": "nodo_aiuto_tito",
+        "content": [
+            "text: Počakaj, šef! Mogoče imam idejo… Vpisal sem tvoje koordinate v spletni planetarij in poskušal ugotoviti, kaj vidiš od tam. Pošiljam ti nekaj posnetkov zaslona.",
+            "image: shared/15 tito 1.jpg",
+            "image: shared/16 tito 2.jpg",
+            "image: shared/17 tito 3.jpg",
+            "text: Kaj praviš? Poskusim vpisati datum rojstva maršala Tita?"
+        ],
+        "choices": [
+            {
+                "0": "POSKUSI!",
+                "next_node": "risposta_corretta"
+            },
+            {
+                "1": "Tukaj je! Zdaj ga vidim…",
+                "next_node": "risposta_corretta"
+            }
+        ]
+    },
+    {
+        "id": "risposta_corretta",
+        "content": [
+            "text: SMO TUUUUU!",
+            "text: Vpisal sem datum rojstva Tita kot kombinacijo. In… se odpre, šef! In so tri fotografije! Tista Brance z napisom Tito, ki jo spremenim (vse napačno) in potem te…",
+            "image: shared/18a eva fotografata da branca.jpg",
+            "image: shared/18b eva fotografata da branca.jpg",
+            "image: shared/18c eva fotografata da branca.jpg",
+            "text: In to je zadnja v seriji:",
+            "image: shared/19 inseguitore di eva fotografato da branca.jpg",
+            "text: Pošiljam glasovno sporočilo!",
+            "audio: VOCALE_26.mp3",
+            "text: 🔎"
+        ],
+        "choices": [
+            {
+                "0": "In me tole pustijo?",
+                "next_node": "bottone_a134"
+            }
+        ]
+    },
+    {
+        "id": "bottone_a134",
+        "content": [
+            "text: Vzemi potrpljenje, poenkrat."
+        ],
+        "choices": [
+            {
+                "0": "Vzemem potrpljenje.",
+                "next_node": "bottone_a135"
+            },
+            {
+                "1": "🤨?",
+                "next_node": "bottone_a135"
+            },
+            {
+                "2": "Gandhi je govoril…",
+                "next_node": "bottone_a135"
+            },
+            {
+                "3": "Bi bil nestrpen, JAZ?",
+                "next_node": "bottone_a135"
+            }
+        ]
+    },
+    {
+        "id": "bottone_a135",
+        "content": [
+            "text: ŠEF!!! Ne boste verjeliiii!!!",
+            "text: Glasovno sporočilo!",
+            "audio: VOCALE_27.mp3"
+        ],
+        "choices": [
+            {
+                "0": "Pošlji!",
+                "next_node": "bottone_a138b"
+            }
+        ]
+    },
+    {
+        "id": "bottone_a138b",
+        "content": [
+            "image: 20 analisi AI tatuaggio rozental SL.jpg",
+            "text: 😱😱😱😱",
+            "text: Kaj počnemo, šefooo?!?!?"
+        ],
+        "effects": {
+            "eva_done": true
+        },
+        "choices": [
+            {
+                "0": "Povej več",
+                "next_node": "b)_seconda_linea:_rozental",
+                "condition": "eva_done && !rozental_done && !ruski_bloki_done"
+            },
+            {
+                "1": "Pomiraj se, ostajamo pri Evo!",
+                "next_node": "bottone_ac",
+                "condition": "eva_done && !rozental_done && !ruski_bloki_done"
+            },
+            {
+                "2": "Ti odloči.",
+                "next_node": "bottone_ad",
+                "condition": "eva_done && !rozental_done && !ruski_bloki_done"
+            },
+            {
+                "3": "Rozental začne smradeti po gnilu",
+                "next_node": "bottone_cab_acb",
+                "condition": "eva_done && !rozental_done && ruski_bloki_done"
+            },
+            {
+                "4": "Naj se začne pri Ruski Bloki?",
+                "next_node": "bottone_abc_bac",
+                "condition": "eva_done && rozental_done && !ruski_bloki_done"
+            },
+            {
+                "5": "Ni panike!",
+                "next_node": "bottone_aexit_bexit_cexit",
+                "condition": "eva_done && rozental_done && ruski_bloki_done"
+            }
+        ]
+    },
+    {
+        "id": "bottone_ac",
+        "content": [
+            "audio: VOCALE_27B.mp3",
+            "audio: VOCALE_27C.mp3",
+            "text: 🏢"
+        ],
+        "choices": [
+            {
+                "0": "Dobra ideja!",
+                "next_node": "bottone_c+"
+            }
+        ]
+    },
+    {
+        "id": "bottone_cab_acb",
+        "content": [
+            "text: Strinjam se, šef… preiskujemo?"
+        ],
+        "choices": [
+            {
+                "0": "Preiskujemo!",
+                "next_node": "b)_seconda_linea:_rozental"
+            }
+        ]
+    },
+    {
+        "id": "b)_seconda_linea:_rozental",
+        "content": [
+            "text: Rozental!",
+            "text: Najprej… iščemo na spletu!",
+            "audio: VOCALE_28.mp3",
+            "image: shared/21 rosa simbolo nova gorica.jpg",
+            "audio: VOCALE_28B.mp3",
+            "text: 🌹"
+        ],
+        "choices": [
+            {
+                "0": "Ok. Številka dva?",
+                "next_node": "bottone_b146"
+            }
+        ]
+    },
+    {
+        "id": "bottone_b146",
+        "content": [
+            "text: Poglej sem!",
+            "text: ⬇️⬇️⬇️",
+            "image: 34 articolo rozental 1960 SL.jpg",
+            "text: Ne vprašaj me, kako sem to naredil berljivo… ker sam ne vem!",
+            "text: Iz spletnega arhiva starih časopisnih člankov. Vendar ne vemo, kateri časopis.",
+            "text: Preberi ga, potem mi povej."
+        ],
+        "choices": [
+            {
+                "0": "Prebral sem!",
+                "next_node": "bottone_b150"
+            }
+        ]
+    },
+    {
+        "id": "bottone_b150",
+        "content": [
+            "text: Dobro. Začnimo, da te popeljem k spomeniku letalca Rusjana, omenjenemu v članku.",
+            "text: Mogoče bo pripeljalo do nečesa.",
+            "text: Tukaj je lokacija!",
+            "map: 45.95623494226689, 13.64677569934882",
+            "audio: VOCALE_29_01.mp3",
+            "audio: VOCALE_29_02.mp3",
+            "audio: VOCALE_29_03.mp3",
+            "text: Ko si na mestu, piši!"
+        ],
+        "choices": [
+            {
+                "0": "Sem pri spomeniku.",
+                "next_node": "bottone_b151"
+            }
+        ]
+    },
+    {
+        "id": "bottone_b151",
+        "content": [
+            "text: Dobro.",
+            "text: Članek iz kroga Rozental pravi, da so pred spomenikom letalca Rusjana ostanki starega pokopališča.",
+            "text: Medtem, ko si na mestu, preveri, če so te “ruševine” pokopališča še vidne."
+        ],
+        "choices": [
+            {
+                "0": "Našel sem jih!",
+                "next_node": "bottone_b154"
+            },
+            {
+                "1": "Kaj naj iščem?",
+                "next_node": "bottone_b153"
+            }
+        ]
+    },
+    {
+        "id": "bottone_b153",
+        "content": [
+            "text: Kaj? 🤷",
+            "text: Grobovi?",
+            "text: Spomeniki?",
+            "text: 🪦🪦🪦",
+            "text: Daj, šef! Uporabi svoje pajkovo čut!",
+            "text: Ni nič pred spomenikom letalca Rusjana? Za cesto?"
+        ],
+        "choices": [
+            {
+                "0": "Našel sem jih!",
+                "next_node": "bottone_b154"
+            }
+        ]
+    },
+    {
+        "id": "bottone_b154",
+        "content": [
+            "text: Ah! Kaj? Pošlji glasovno sporočilo in opiši, kar vidiš."
+        ],
+        "ai_fallback": {
+            "prompt": "Uporabnik ti mora poslati glasovno sporočilo, v katerem opiše, kar vidi.",
+            "succes_condition": "Uporabnik mora poslati glasovno sporočilo. Počakaj, da pošlje glasovno sporočilo, preden preideš na naslednji vozlišče.",
+            "next_node": "invio_vocale"
+        }
+    },
+    {
+        "id": "invio_vocale",
+        "content": [
+            "text: Tukaj je, kar sem jaz našel!",
+            "pdf: 35 SL metropoli necropoli.pdf",
+            "text: 🧟‍♂️",
+            "text: povej mi, ko končaš brati"
+        ],
+        "choices": [
+            {
+                "0": "Prebral sem",
+                "next_node": "bottone_b155"
+            }
+        ]
+    },
+    {
+        "id": "bottone_b155",
+        "content": [
+            "text: Članek je nov, a očitno se nanaša na te kamne.",
+            "audio: VOCALE_31.mp3",
+            "text: 🐓"
+        ],
+        "choices": [
+            {
+                "0": "Poskusim.",
+                "next_node": "bottone_b156"
+            },
+            {
+                "1": "Ni se splača.",
+                "next_node": "bottone_b157"
+            },
+            {
+                "2": "Hočeš, da me aretirajo!",
+                "next_node": "bottone_b158"
+            },
+            {
+                "3": "☠️ ODVZDOVAJ TE HROŠČI ☠️",
+                "next_node": "bottone_b159"
+            }
+        ]
+    },
+    {
+        "id": "bottone_b156",
+        "content": [
+            "text: Pojdi!",
+            "text: Razpusti se, šef!",
+            "text: In sporoči…",
+            "text: Medtem…",
+            "text: Kako se imenuje polkovnik cesarja! Je ime na grobu?",
+            "text: Mogoče je povezan z Rozental!",
+            "text: Zapiši mi."
+        ],
+        "validation": {
+            "accepted_answers": [
+                "conrad",
+                "hotzendorf",
+                "hötzendorf",
+                "feldmaresciallo"
+            ],
+            "correct_node": "risposta_corretta_2",
+            "fallback_node": "nodo_aiuto_feldmaresciallo",
+            "max_attempts": 3,
+            "error_messages": [
+                "text: Nismo na pravi poti... pomisli na spomenik pred seboj.",
+                "text: To je avstro-ogrško ime. Poskusi znova!",
+                "text: Preuči znak spomenika bolj natančno..."
+            ]
+        }
+    },
+    {
+        "id": "nodo_aiuto_feldmaresciallo",
+        "content": [
+            "text: Nič, šef... nismo... ampak srečo imaš asistenta (ki bi si zaslužil povišico, kaj praviš?).",
+            "text: Našel sem ta članek v spletni bazi.",
+            "pdf: 36 Prima di Nova Gorica - Pred Novo Gorico.pdf",
+            "text: Raziskujem Hertleina... a bo te stalo vsaj večerjo..."
+        ],
+        "choices": [
+            {
+                "0": "Touché...",
+                "next_node": "risposta_corretta_2"
+            }
+        ]
+    },
+    {
+        "id": "bottone_b157",
+        "content": [
+            "text: Kaj to pomeni?",
+            "text: Nič… skrivni prehodi? 😞",
+            "text: Medtem mi povej, kako se imenuje polkovnik cesarja. Je ime na grobu?",
+            "text: Mogoče je povezan z Rozental!",
+            "text: Zapiši mi."
+        ],
+        "validation": {
+            "accepted_answers": [
+                "conrad",
+                "hotzendorf",
+                "hötzendorf",
+                "feldmaresciallo"
+            ],
+            "correct_node": "risposta_corretta_2",
+            "fallback_node": "nodo_aiuto_feldmaresciallo",
+            "max_attempts": 3,
+            "error_messages": [
+                "text: Nismo na pravi poti... pomisli na spomenik pred seboj.",
+                "text: To je avstro-ogrško ime. Poskusi znova!",
+                "text: Preuči znak spomenika bolj natančno..."
+            ]
+        }
+    },
+    {
+        "id": "bottone_b158",
+        "content": [
+            "text: Arrestarti! Kaj pa!",
+            "text: In potem… če te niso aretirali do zdaj, s tem obrazom pomeni, da ne tvegaš.",
+            "text: 🤣🤣🤣",
+            "text: Oprosti, šef… prišlo mi je tako!",
+            "text: Medtem mi povej, kako se imenuje polkovnik cesarja. Je ime na grobu?",
+            "text: Mogoče je povezan z Rozental!",
+            "text: Zapiši mi."
+        ],
+        "validation": {
+            "accepted_answers": [
+                "conrad",
+                "hotzendorf",
+                "hötzendorf",
+                "feldmaresciallo"
+            ],
+            "correct_node": "risposta_corretta_2",
+            "fallback_node": "nodo_aiuto_feldmaresciallo",
+            "max_attempts": 3,
+            "error_messages": [
+                "text: Nismo na pravi poti... pomisli na spomenik pred seboj.",
+                "text: To je avstro-ogrško ime. Poskusi znova!",
+                "text: Preuči znak spomenika bolj natančno..."
+            ]
+        }
+    },
+    {
+        "id": "bottone_b159",
+        "content": [
+            "text: V redu, v redu, v redu!",
+            "text: Recimo… Bil si bolj punk! 🧷🎸🔥",
+            "text: Medtem mi povej, kako se imenuje polkovnik cesarja. Je ime na grobu?",
+            "text: Mogoče je povezan z Rozental!",
+            "text: Zapiši mi."
+        ],
+        "validation": {
+            "accepted_answers": [
+                "conrad",
+                "hotzendorf",
+                "hötzendorf",
+                "feldmaresciallo"
+            ],
+            "correct_node": "risposta_corretta_2",
+            "fallback_node": "nodo_aiuto_feldmaresciallo",
+            "max_attempts": 3,
+            "error_messages": [
+                "text: Nismo na pravi poti... pomisli na spomenik pred seboj.",
+                "text: To je avstro-ogrško ime. Poskusi znova!",
+                "text: Preuči znak spomenika bolj natančno..."
+            ]
+        }
+    },
+    {
+        "id": "risposta_corretta_2",
+        "content": [
+            "audio: VOCALE_32.mp3",
+            "pdf: 22 documento sismi SL.pdf",
+            "text: ŠEF!",
+            "text: SI VIDEL KDO JE?"
+        ],
+        "choices": [
+            {
+                "0": "Kdo?",
+                "next_node": "bottone_b160a"
+            },
+            {
+                "1": "Noro!",
+                "next_node": "bottone_b160b"
+            }
+        ]
+    },
+    {
+        "id": "bottone_b160a",
+        "content": [
+            "text: Kako \"kdo\"?"
+        ],
+        "open": {
+            "next_node": "bottone_b161"
+        }
+    },
+    {
+        "id": "bottone_b160b",
+        "content": [
+            "text: Res noro!"
+        ],
+        "open": {
+            "next_node": "bottone_b161"
+        }
+    },
+    {
+        "id": "bottone_b161",
+        "content": [
+            "audio: VOCALE_33.mp3",
+            "text: 🪤"
+        ],
+        "effects": {
+            "rozental_done": true
+        },
+        "choices": [
+            {
+                "0": "Lahko gre.",
+                "next_node": "bottone_b162",
+                "condition": "rozental_done && !eva_done && !ruski_bloki_done"
+            },
+            {
+                "1": "Nadaljuj...",
+                "next_node": "bottone_b162",
+                "condition": "rozental_done && !eva_done && !ruski_bloki_done"
+            }
+        ]
+    },
+    {
+        "id": "bottone_b162",
+        "content": [
+            "audio: VOCALE_34.mp3",
+            "text: 🥵😤🤬😰"
+        ],
+        "effects": {
+            "rozental_done": true
+        },
+        "choices": [
+            {
+                "0": "Osredotočimo se na Evo",
+                "next_node": "a)_prima_linea:_eva",
+                "condition": "rozental_done && !eva_done && !ruski_bloki_done"
+            },
+            {
+                "1": "Začnem razmišljati o Ruski Bloki",
+                "next_node": "bottone_bc",
+                "condition": "rozental_done && !eva_done && !ruski_bloki_done"
+            },
+            {
+                "2": "Ne vem kaj storiti",
+                "next_node": "bottone_bd",
+                "condition": "rozental_done && !eva_done && !ruski_bloki_done"
+            },
+            {
+                "3": "Naj se začne pri Ruski Bloki?",
+                "next_node": "bottone_abc_bac",
+                "condition": "rozental_done && eva_done && !ruski_bloki_done"
+            },
+            {
+                "4": "Kdo jo je bežala, Eva?",
+                "next_node": "bottone_bca_cba",
+                "condition": "rozental_done && !eva_done && ruski_bloki_done"
+            },
+            {
+                "5": "Vedno prehitro tečeš...",
+                "next_node": "bottone_aexit_bexit_cexit",
+                "condition": "rozental_done && eva_done && ruski_bloki_done"
+            }
+        ]
+    },
+    {
+        "id": "bottone_bc",
+        "content": [
+            "text: In ne samo ti, šef! Ko sem dobil zemljevid, sem se spraševal, kaj se skriva tam. Zakaj so Branca privabili?",
+            "text: Gremo na sprehod in si pogledamo?"
+        ],
+        "choices": [
+            {
+                "0": "Gremo!",
+                "next_node": "bottone_c+"
+            }
+        ]
+    },
+    {
+        "id": "bottone_abc_bac",
+        "content": [
+            "text: Ne vem, ampak definitivno bi se poglobil v to. Tudi Branca je usmeril pozornost nanje: jih je tudi označil na karti!",
+            "text: Kaj praviš?",
+            "text: Te popeljem?"
+        ],
+        "choices": [
+            {
+                "0": "Pojdi!",
+                "next_node": "c)_terza_linea:_ruski_bloki"
+            }
+        ]
+    },
+    {
+        "id": "c)_terza_linea:_ruski_bloki",
+        "content": [
+            "text: To so “ruski bloki”... stari stanovanjski kvart Nova Gorica, eden izmed redkih dejansko zgrajenih delov “idealne mesta” – tako je videti. Zanimivo.",
+            "text: Te popeljem?"
+        ],
+        "choices": [
+            {
+                "0": "Ne, ostajamo pri Evo",
+                "next_node": "a)_prima_linea:_eva"
+            },
+            {
+                "1": "Ne, bolj preiskujemo Rozental",
+                "next_node": "bottone_b"
+            },
+            {
+                "2": "Pojdi!",
+                "next_node": "bottone_c+"
+            }
+        ]
+    },
+    {
+        "id": "bottone_c+",
+        "content": [
+            "text: Ruski bloki!",
+            "text: Tukaj so koordinate!",
+            "map: 45.95321821243998, 13.646104999824358",
+            "audio: VOCALE_17_01.mp3",
+            "audio: VOCALE_17_02.mp3",
+            "audio: VOCALE_17_03.mp3",
+            "audio: VOCALE_17_04.mp3",
+            "text: Sporoči, ko si tam!"
+        ],
+        "choices": [
+            {
+                "0": "Sem na mestu",
+                "next_node": "bottone_c114"
+            }
+        ]
+    },
+    {
+        "id": "bottone_c114",
+        "content": [
+            "text: Zanašam se na tvoje oči!",
+            "text: Poskusi ugotoviti, kaj je Branca iskala.",
+            "text: Pošlji mi glasovno sporočilo in povej: kaj vidiš?"
+        ],
+        "ai_fallback": {
+            "prompt": "Uporabnik ti mora poslati glasovno sporočilo, v katerem opiše, kar vidi.",
+            "succes_condition": "Uporabnik mora poslati glasovno sporočilo. Počakaj, da pošlje glasovno sporočilo, preden preideš na naslednji vozlišče.",
+            "next_node": "invio_vocale_2"
+        }
+    },
+    {
+        "id": "invio_vocale_2",
+        "content": [
+            "text: Mhm...",
+            "text: Kar praviš, mi je prižgalo iskrico... počakaj, pošiljam fotografijo.",
+            "image: shared/11 simon e eva.jpg",
+            "text: Ta fotografija je bila v paketu med dokumenti Evinega okrepljenja in poslanih v Italijo s strani detektiva Brance.",
+            "text: Misliš, da bi bila posneta v bližini?"
+        ],
+        "choices": [
+            {
+                "0": "Seveda!",
+                "next_node": "bottone_c115"
+            },
+            {
+                "1": "Ne vem...",
+                "next_node": "bottone_c116"
+            }
+        ]
+    },
+    {
+        "id": "bottone_c115",
+        "content": [
+            "text: Daj, pošlji mi fotografijo tega razgleda, kakšen je danes! 📸"
+        ],
+        "ai_fallback": {
+            "prompt": "Uporabnik ti mora poslati fotografijo.",
+            "succes_condition": "Uporabnik mora poslati fotografijo. Počakaj, da pošlje fotografijo, preden nadaljuješ na naslednji vozlišče.",
+            "next_node": "invio_foto_2"
+        }
+    },
+    {
+        "id": "invio_foto_2",
+        "content": [
+            "text: Hvala, šef! Spravim v arhiv",
+            "text: V vsakem primeru je Eva, brez dvoma!",
+            "text: To je, kar je Branca iskala: išče mesto, kjer je Eva odrasla.",
+            "text: Poglej, kaj še sem našel v paketu!",
+            "image: shared/12 eva e fabijan.jpg",
+            "text: Mogoče je bila tudi ta fotografija posneta v bližini.",
+            "text: Jo vidiš?"
+        ],
+        "choices": [
+            {
+                "0": "Mogoče je.",
+                "next_node": "bottone_c117"
+            },
+            {
+                "1": "Ne bi rekli.",
+                "next_node": "bottone_c118"
+            }
+        ]
+    },
+    {
+        "id": "bottone_c116",
+        "content": [
+            "text: Mh...",
+            "text: Ampak če bi bila, in če je na fotografiji Eva (in pogled res izgleda kot Eva, ko je odrasla) je možno, da je Branca iskal mesto, kjer je Eva odrasla.",
+            "text: Bingo! Poglej! Druga podobna fotografija v paketu!",
+            "image: shared/12 eva e fabijan.jpg",
+            "text: Mogoče je bila ta fotografija posneta tam.",
+            "text: Možno?"
+        ],
+        "choices": [
+            {
+                "0": "Ja.",
+                "next_node": "bottone_c117"
+            },
+            {
+                "1": "Ne...",
+                "next_node": "bottone_c118"
+            }
+        ]
+    },
+    {
+        "id": "bottone_c117",
+        "content": [
+            "text: Super! Najdi mesto, kjer se lahko usedeš!"
+        ],
+        "choices": [
+            {
+                "0": "Razmislimo!",
+                "next_node": "bottone_c119"
+            }
+        ]
+    },
+    {
+        "id": "bottone_c118",
+        "content": [
+            "text: Mogoče je bila odstranjena. Pretekel je čas…",
+            "text: Mogoče šestdeset let, od dneva, ko je bila ta fotografija posneta…",
+            "text: Najdi klop in se usedi nekaj časa.",
+            "text: Poskusimo razmišljati!"
+        ],
+        "choices": [
+            {
+                "0": "Razmislimo!",
+                "next_node": "bottone_c119"
+            }
+        ]
+    },
+    {
+        "id": "bottone_c119",
+        "content": [
+            "audio: VOCALE_18.mp3",
+            "image: 13 screenshot novak SL.jpg",
+            "text: Kaj praviš?"
+        ],
+        "choices": [
+            {
+                "0": "Je on, čutim ga!",
+                "next_node": "bottone_c120a"
+            },
+            {
+                "1": "Mh... Ruski Bloki!",
+                "next_node": "bottone_c120b"
+            },
+            {
+                "2": "Ja. Starost se ujema.",
+                "next_node": "bottone_c120b"
+            },
+            {
+                "3": "Kaj še imaš zanj?",
+                "next_node": "bottone_c120c"
+            }
+        ]
+    },
+    {
+        "id": "bottone_c120a",
+        "content": [
+            "text: Strinjam se, šef!"
+        ],
+        "open": {
+            "next_node": "bottone_c120"
+        }
+    },
+    {
+        "id": "bottone_c120b",
+        "content": [
+            "text: Ja!"
+        ],
+        "open": {
+            "next_node": "bottone_c120"
+        }
+    },
+    {
+        "id": "bottone_c120c",
+        "content": [
+            "text: Poglejmo...",
+            "text: Malo sem pregledal: nekaj njegovih raziskav... publikacije... konference... nič, kar bi mi pritegnilo pozornost..."
+        ],
+        "open": {
+            "next_node": "bottone_c120"
+        }
+    },
+    {
+        "id": "bottone_c120",
+        "content": [
+            "text: Zdi se, da je prispel v Berlin zelo mlad. Zagotovo leta 1990 ni več živel v Nova Gorici.",
+            "text: ... Kaj delamo?"
+        ],
+        "choices": [
+            {
+                "0": "Ni nič v paketu?",
+                "next_node": "bottone_c121"
+            }
+        ]
+    },
+    {
+        "id": "bottone_c121",
+        "content": [
+            "audio: VOCALE_19_01.mp3",
+            "audio: VOCALE_19_02.mp3",
+            "text: Šef... TESOR!!!!!!",
+            "text: Začnem se vzburjati! Kaj, če je Eva odkrila kaj? Če je prišla v Nova Gorico po Ravnikarjev zaklad?",
+            "text: Indiana Jones in zadnji križarski pohod, se spomniš? Leta 1990 je bil ravno izšel v kinodvorano!!!",
+            "text: Ok, to je uradno...",
+            "text: P A N I C O !"
+        ],
+        "effects": {
+            "ruski_bloki_done": true
+        },
+        "choices": [
+            {
+                "0": "Eva, kaj si počela?",
+                "next_node": "bottone_ca",
+                "condition": "ruski_bloki_done && !rozental_done && !eva_done"
+            },
+            {
+                "1": "Spet ti Rozental… veš kaj?",
+                "next_node": "b)_seconda_linea:_rozental",
+                "condition": "ruski_bloki_done && !rozental_done && !eva_done"
+            },
+            {
+                "2": "Rozental začne smradeti po gnilu",
+                "next_node": "bottone_cab_acb",
+                "condition": "ruski_bloki_done && !rozental_done && eva_done"
+            },
+            {
+                "3": "Kdo jo je bežal, Eva?",
+                "next_node": "bottone_bca_cba",
+                "condition": "ruski_bloki_done && rozental_done && !eva_done"
+            },
+            {
+                "4": "Pomiri se!",
+                "next_node": "bottone_aexit_bexit_cexit",
+                "condition": "ruski_bloki_done && rozental_done && eva_done"
+            }
+        ]
+    },
+    {
+        "id": "bottone_ca",
+        "content": [
+            "audio: VOCALE_20.mp3",
+            "text: 🕵️‍♂️"
+        ],
+        "choices": [
+            {
+                "0": "Sem pri tem!",
+                "next_node": "a)_prima_linea:_eva"
+            }
+        ]
+    },
+    {
+        "id": "bottone_d",
+        "content": [
+            "text: Naj jaz odločim?",
+            "text: Ok, veš kaj? Tu so Brancini kocke. Vržem kocko, poglejmo, kaj pade?",
+            "text: Dobro, ker gre za kazino… vstopimo v pravi razpoložljivost! 🃏",
+            "text: Če pade ena ali dve, gre na označeno območje.",
+            "text: Če pade tri ali štiri, se posvetimo Evo.",
+            "text: Če pade pet ali šest, se ukvarjamo z Rozental.",
+            "text: Super, kajne? Čeprav kocka ni prevarana… 😆",
+            "text: 🎲 Grem? 🎲"
+        ],
+        "choices": [
+            {
+                "0": "Gremo!",
+                "next_node": "bottone_d164"
+            }
+        ]
+    },
+    {
+        "id": "dado_1_ruski_bloki",
+        "content": [
+            "text: Ena!",
+            "image: shared/24 dado 1.jpg"
+        ],
+        "choices": [
+            {
+                "0": "Ruski Bloki!",
+                "next_node": "c)_terza_linea:_ruski_bloki"
+            }
+        ]
+    },
+    {
+        "id": "dado_2_ruski_bloki",
+        "content": [
+            "text: Dve!",
+            "image: shared/25 dado 2.jpg"
+        ],
+        "choices": [
+            {
+                "0": "Ruski Bloki!",
+                "next_node": "c)_terza_linea:_ruski_bloki"
+            }
+        ]
+    },
+    {
+        "id": "dado_3_ruski_bloki",
+        "content": [
+            "text: Tri!",
+            "image: shared/26 dado 3.jpg"
+        ],
+        "choices": [
+            {
+                "0": "Ruski Bloki!",
+                "next_node": "c)_terza_linea:_ruski_bloki"
+            }
+        ]
+    },
+    {
+        "id": "dado_1_rozental",
+        "content": [
+            "text: Ena!",
+            "image: shared/24 dado 1.jpg"
+        ],
+        "choices": [
+            {
+                "0": "Rozental!",
+                "next_node": "b)_seconda_linea:_rozental"
+            }
+        ]
+    },
+    {
+        "id": "dado_2_rozental",
+        "content": [
+            "text: Dve!",
+            "image: shared/25 dado 2.jpg"
+        ],
+        "choices": [
+            {
+                "0": "Rozental!",
+                "next_node": "b)_seconda_linea:_rozental"
+            }
+        ]
+    },
+    {
+        "id": "dado_3_rozental",
+        "content": [
+            "text: Tri!",
+            "image: shared/26 dado 3.jpg"
+        ],
+        "choices": [
+            {
+                "0": "Rozental!",
+                "next_node": "b)_seconda_linea:_rozental"
+            }
+        ]
+    },
+    {
+        "id": "dado_4_rozental",
+        "content": [
+            "text: Štiri!",
+            "image: shared/27 dado 4.jpg"
+        ],
+        "choices": [
+            {
+                "0": "Rozental!",
+                "next_node": "b)_seconda_linea:_rozental"
+            }
+        ]
+    },
+    {
+        "id": "dado_5_rozental",
+        "content": [
+            "text: Pet!",
+            "image: shared/28 dado 5.jpg"
+        ],
+        "choices": [
+            {
+                "0": "Rozental!",
+                "next_node": "b)_seconda_linea:_rozental"
+            }
+        ]
+    },
+    {
+        "id": "dado_6_rozental",
+        "content": [
+            "text: Šest!",
+            "image: shared/29 dado 6.jpg"
+        ],
+        "choices": [
+            {
+                "0": "Rozental!",
+                "next_node": "b)_seconda_linea:_rozental"
+            }
+        ]
+    },
+    {
+        "id": "dado_3_eva",
+        "content": [
+            "text: Tri!",
+            "image: shared/26 dado 3.jpg"
+        ],
+        "choices": [
+            {
+                "0": "Eva!",
+                "next_node": "a)_prima_linea:_eva"
+            }
+        ]
+    },
+    {
+        "id": "dado_4_eva",
+        "content": [
+            "text: Štiri!",
+            "image: shared/27 dado 4.jpg"
+        ],
+        "choices": [
+            {
+                "0": "Eva!",
+                "next_node": "a)_prima_linea:_eva"
+            }
+        ]
+    },
+    {
+        "id": "dado_5_eva",
+        "content": [
+            "text: Pet!",
+            "image: shared/28 dado 5.jpg"
+        ],
+        "choices": [
+            {
+                "0": "Eva!",
+                "next_node": "a)_prima_linea:_eva"
+            }
+        ]
+    },
+    {
+        "id": "dado_6_eva",
+        "content": [
+            "text: Šest!",
+            "image: shared/29 dado 6.jpg"
+        ],
+        "choices": [
+            {
+                "0": "Eva!",
+                "next_node": "a)_prima_linea:_eva"
+            }
+        ]
+    },
+    {
+        "id": "bottone_ad",
+        "content": [
+            "text: Naj jaz odločim?",
+            "text: Ok, veš kaj? Tu so Brancini kocke. Vržem kocko, poglejmo, kaj pade?",
+            "text: Dobro, ker gre za kazino… vstopimo v pravi razpoložljivost! 🃏",
+            "text: Če pade ena, dve ali tri, gre na označeno območje.",
+            "text: Če pade štiri, pet ali šest, se ukvarjamo z Rozental.",
+            "text: Super, kajne? Čeprav kocka ni prevarana… 😆",
+            "text: 🎲 Grem? 🎲"
+        ],
+        "choices": [
+            {
+                "0": "Gremo!",
+                "next_node": "bottone_ad164"
+            }
+        ]
+    },
+    {
+        "id": "bottone_ad164",
+        "content": [],
+        "random_outcome": [
+            "dado_1_ruski_bloki",
+            "dado_2_ruski_bloki",
+            "dado_3_ruski_bloki",
+            "dado_4_rozental",
+            "dado_5_rozental",
+            "dado_6_rozental"
+        ],
+        "randomOutcome": [
+            "dado_1_ruski_bloki",
+            "dado_2_ruski_bloki",
+            "dado_3_ruski_bloki",
+            "dado_4_rozental",
+            "dado_5_rozental",
+            "dado_6_rozental"
+        ]
+    },
+    {
+        "id": "bottone_bd",
+        "content": [
+            "text: Naj jaz odločim?",
+            "text: Ok, veš kaj? Tu so Brancini kocke. Vržem kocko, poglejmo, kaj pade?",
+            "text: Dobro, ker gre za kazino… vstopimo v pravi razpoložljivost! 🃏",
+            "text: Če pade ena, dve ali tri, gre na označeno območje.",
+            "text: Če pade štiri, pet ali šest, sledimo Evo.",
+            "text: Super, kajne? Čeprav kocka ni prevarana… 😆",
+            "text: 🎲 Grem? 🎲"
+        ],
+        "choices": [
+            {
+                "0": "Gremo!",
+                "next_node": "bottone_bd164"
+            }
+        ]
+    },
+    {
+        "id": "bottone_bd164",
+        "content": [],
+        "random_outcome": [
+            "dado_1_ruski_bloki",
+            "dado_2_ruski_bloki",
+            "dado_3_ruski_bloki",
+            "dado_4_eva",
+            "dado_5_eva",
+            "dado_6_eva"
+        ],
+        "randomOutcome": [
+            "dado_1_ruski_bloki",
+            "dado_2_ruski_bloki",
+            "dado_3_ruski_bloki",
+            "dado_4_eva",
+            "dado_5_eva",
+            "dado_6_eva"
+        ]
+    },
+    {
+        "id": "bottone_cd",
+        "content": [
+            "text: Naj jaz odločim?",
+            "text: Ok, veš kaj? Tu so Brancini kocke. Vržem kocko, poglejmo, kaj pade?",
+            "text: Dobro, ker gre za kazino… vstopimo v pravi razpoložljivost! 🃏",
+            "text: Če pade ena, dve ali tri, preiskujemo Rozental.",
+            "text: Če pade štiri, pet ali šest, sledimo Evo.",
+            "text: Super, kajne? Čeprav kocka ni prevarana… 😆",
+            "text: 🎲 Grem? 🎲"
+        ],
+        "choices": [
+            {
+                "0": "Gremo!",
+                "next_node": "bottone_cd164"
+            }
+        ]
+    },
+    {
+        "id": "bottone_cd164",
+        "content": [],
+        "random_outcome": [
+            "dado_1_rozental",
+            "dado_2_rozental",
+            "dado_3_rozental",
+            "dado_4_eva",
+            "dado_5_eva",
+            "dado_6_eva"
+        ],
+        "randomOutcome": [
+            "dado_1_rozental",
+            "dado_2_rozental",
+            "dado_3_rozental",
+            "dado_4_eva",
+            "dado_5_eva",
+            "dado_6_eva"
+        ]
+    },
+    {
+        "id": "bottone_d164",
+        "content": [],
+        "random_outcome": [
+            "dado_1_ruski_bloki",
+            "dado_2_ruski_bloki",
+            "dado_3_eva",
+            "dado_4_eva",
+            "dado_5_rozental",
+            "dado_6_rozental"
+        ],
+        "randomOutcome": [
+            "dado_1_ruski_bloki",
+            "dado_2_ruski_bloki",
+            "dado_3_rozental",
+            "dado_4_rozental",
+            "dado_5_eva",
+            "dado_6_eva"
+        ]
+    },
+    {
+        "id": "bottone_aexit_bexit_cexit",
+        "content": [
+            "text: Imaš prav, šef! Kaj pa ljubosumno, da ne morem biti tam s tabo!!!!",
+            "text: 😤😤😤",
+            "text: Veš, kaj je zdaj potrebno?"
+        ],
+        "choices": [
+            {
+                "0": "Razsvetljenje?",
+                "next_node": "bottone_170"
+            },
+            {
+                "1": "Kava?",
+                "next_node": "bottone_170"
+            },
+            {
+                "2": "Sladoled?",
+                "next_node": "bottone_170"
+            },
+            {
+                "3": "...počitnice?",
+                "next_node": "bottone_170"
+            }
+        ],
+        "requiresAllSteps": true
+    },
+    {
+        "id": "bottone_170",
+        "content": [
+            "text: Hehe… dobro rečeno, šef!",
+            "text: 😁",
+            "text: Pravzaprav tudi jaz potrebujem razjasniti misli.",
+            "text: Pravzaprav, ta primer je dolg in zapleten. Če želiš prekinitev preiskave in se poiskati kasneje, z jasnim umom (ali tudi jutri…) sem vedno tukaj.",
+            "text: Medtem bom spisal vse zapiske in združil koščke. 🕵️"
+        ],
+        "choices": [
+            {
+                "0": "Zadostuje mi hiter odmor?",
+                "next_node": "bottone_173a"
+            },
+            {
+                "1": "Raje nadaljujemo drug dan.",
+                "next_node": "bottone_173b"
+            }
+        ]
+    },
+    {
+        "id": "bottone_173a",
+        "content": [
+            "text: Super, šef.",
+            "text: Imam predlog: pojdimo na trg. Ja. Tam so klopi, kavarnice, sladoledarnice… Usedi se, kjer želiš, vzemi kar želiš, potem se razjasnimo. Skupaj.",
+            "text: Še vedno si na dopustu!",
+            "text: Pošiljam ti karto.",
+            "map: 45.95744174114331, 13.64724423025279",
+            "text: Pravzaprav bom še več: pošiljam ti motivacijsko skladbo, da se napolniš z energijo!",
+            "audio: move_those_little_legs.mp3",
+            "text: 🎸",
+            "text: Ko si tu, sporoči!"
+        ],
+        "choices": [
+            {
+                "0": "Sem tukaj!",
+                "next_node": "bottone_174"
+            }
+        ]
+    },
+    {
+        "id": "bottone_173b",
+        "content": [
+            "text: Vzemi si ves čas, ki ga potrebuješ: sem vedno na voljo, šef...",
+            "text: Tudi ponoči!  🐺🌙🦉",
+            "text: Ta primer me zelo zanima, ampak moramo biti v polni formi, da najdemo rešitev!",
+            "text: Ko si tukaj, sporoči: bomo začeli na trgu France Bevk."
+        ],
+        "choices": [
+            {
+                "0": "Sem tukaj. Začnimo znova?",
+                "next_node": "bottone_173c"
+            }
+        ]
+    },
+    {
+        "id": "bottone_173c",
+        "content": [
+            "text: Evvaaaaiiii! 🚀🚀🚀",
+            "text: Ne vem zakaj, ampak čutil sem, da boš napisal: sem že na lokaciji!",
+            "text: Si na trgu?"
+        ],
+        "choices": [
+            {
+                "0": "Seveda!",
+                "next_node": "bottone_174"
+            },
+            {
+                "1": "Ne… kje je?",
+                "next_node": "bottone_113e"
+            }
+        ]
+    },
+    {
+        "id": "bottone_113e",
+        "content": [
+            "map: 45.95744174114331, 13.64724423025279",
+            "text: To je lokacija! Se vidimo tam. Medtem… poslušaj to: motivacijska skladba, da segreješ motorje! Gremo, gremo, gremo, šef!",
+            "audio: move_those_little_legs.mp3",
+            "text: 🎸",
+            "text: Ko si tu, sporoči!"
+        ],
+        "choices": [
+            {
+                "0": "Sem tukaj!",
+                "next_node": "bottone_174"
+            }
+        ]
+    },
+    {
+        "id": "bottone_174",
+        "content": [
+            "text: Odlično!",
+            "text: Res je, da je tokrat preiskava težka.",
+            "text: Medtem pa sem pomislil… Predstavljaj si ubogo Evo! Vrniti se domov, tam, sama, v državi na robu propada… in umreti tako.",
+            "text: 😢",
+            "text: Čutim se malo žalostnega..."
+        ],
+        "choices": [
+            {
+                "0": "Seveda!",
+                "next_node": "bottone_176"
+            },
+            {
+                "1": "Delamo profesionalce…",
+                "next_node": "bottone_177"
+            }
+        ]
+    },
+    {
+        "id": "bottone_177",
+        "content": [
+            "text: Imaš brusni papir namesto srca, šef! 😡",
+            "text: Vendar: smo se zelo osredotočili na kroniko, na Branco, na umor, na primer. A to je pravzaprav zgodba o Evo. O dekletu – in o generaciji – ki priča razpadu svoje države. O ideologiji. O svetu. Kakšen naj bo?",
+            "text: Če ti okrog vse pade… kaj – knjiga, pesem, glasbeni album, film… – nekaj iz preteklosti… bi vzel s seboj? Kaj bi te spominjalo na svet, iz katerega prihajaš?"
+        ],
+        "choices": [
+            {
+                "0": "Zakaj me sprašuješ?",
+                "next_node": "bottone_178"
+            }
+        ]
+    },
+    {
+        "id": "bottone_176",
+        "content": [
+            "text: ❤️‍🩹",
+            "text: Vendar: smo se zelo osredotočili na kroniko, na Branco, na umor, na primer. A to je pravzaprav zgodba o Evo. O dekletu – in o generaciji – ki priča razpadu svoje države. O ideologiji. O svetu. Kakšen naj bo?",
+            "text: Če ti okrog vse pade… kaj – knjiga, pesem, glasbeni album, film… – nekaj iz preteklosti… bi vzel s seboj?"
+        ],
+        "choices": [
+            {
+                "0": "Zakaj me sprašuješ?",
+                "next_node": "bottone_178"
+            }
+        ]
+    },
+    {
+        "id": "bottone_178",
+        "content": [
+            "text: Mogoče, da moramo za razrešitev primera vstati v Evoine čevlje.",
+            "text: Razumeti, kaj jo je spomnilo, da se je vrnila sem in si prisvojila te dokumente. Poskusi, če želiš: če bi se tvoj svet nenadoma zrušil, kaj bi rešil in vzel s seboj?"
+        ],
+        "ai_fallback": {
+            "prompt": "Uporabnik mora odgovoriti na vprašanje: če bi se tvoj svet nenadoma zrušil, kaj bi rešil in vzel s seboj?",
+            "next_node": "risposta_libera_3"
+        }
+    },
+    {
+        "id": "risposta_libera_3",
+        "content": [
+            "text: 💜",
+            "text: Vzel bi svoje plošče… tiste, ki jih poslušam vsak dan s tabo, medtem ko razrešujemo naše primere. Res smo razrešili veliko, šef… včasih pomislim…",
+            "text: Moral bi narediti oglasno desko, tukaj, v novem uradu! Kaj praviš?",
+            "text: To bi bilo noro!!! Kot muzej!!!",
+            "text: 😭",
+            "text: Daj, dovolj srčnih sokov, sicer se bom razburil. Imamo misijo! In mislim, da smo v pravem duhu.",
+            "text: Gremo naprej, šef?"
+        ],
+        "choices": [
+            {
+                "0": "Razrešimo primer!",
+                "next_node": "bottone_180_1"
+            },
+            {
+                "1": "Ne kliči me \"šef\".",
+                "next_node": "bottone_180_2"
+            }
+        ]
+    },
+    {
+        "id": "bottone_180_1",
+        "content": [
+            "text: ⚔️💚⚔️"
+        ],
+        "open": {
+            "next_node": "bottone_181"
+        }
+    },
+    {
+        "id": "bottone_180_2",
+        "content": [
+            "text: 💘"
+        ],
+        "open": {
+            "next_node": "bottone_181"
+        }
+    },
+    {
+        "id": "bottone_181",
+        "content": [
+            "text: Opravimo pregled, šef, kaj praviš?",
+            "text: Pošiljam velik glasovni zapis!",
+            "audio: VOCALE_35_01.mp3",
+            "audio: VOCALE_35_02.mp3",
+            "audio: VOCALE_35_03.mp3",
+            "text: Delite kakšne ideje, šef… ker jaz… imam le eno, precej neumna."
+        ],
+        "choices": [
+            {
+                "0": "Kaj bi bilo?",
+                "next_node": "bottone_182"
+            }
+        ]
+    },
+    {
+        "id": "bottone_182",
+        "content": [
+            "text: Heh… nisem pomislil prej. Ampak zdaj, ko vidim…",
+            "text: Tu je stari Brancin telefon. In v govorni pošti…",
+            "text: Mislim, da je tam trak."
+        ],
+        "choices": [
+            {
+                "0": "Še en trak!",
+                "next_node": "bottone_195"
+            },
+            {
+                "1": "Poslušajva ga?",
+                "next_node": "bottone_195"
+            },
+            {
+                "2": "In to zdaj praviš?",
+                "next_node": "bottone_195"
+            },
+            {
+                "3": "😐",
+                "next_node": "bottone_195"
+            }
+        ]
+    },
+    {
+        "id": "bottone_195",
+        "content": [
+            "text: Ja, ni bil del preiskavnih dokumentov! Kaj naj pomislim? Pri vsem tej neumnosti! Misli, da sem moral vse odvreči.",
+            "text: Dobro: ga dam na predvajanje.",
+            "audio: VOCALE_36_01.mp3",
+            "audio: VOCALE_36_02.mp3",
+            "text: Kaj bo to pomenilo, šef?"
+        ],
+        "choices": [
+            {
+                "0": "Da se sporočilo bere samo ponoči?",
+                "next_node": "bottone_199"
+            },
+            {
+                "0": "Da se sporočilo bere samo od zgoraj?",
+                "next_node": "bottone_200"
+            },
+            {
+                "0": "Da je sporočilo v tujem jeziku?",
+                "next_node": "bottone_201"
+            },
+            {
+                "0": "Po mojem je to norček…",
+                "next_node": "bottone_202"
+            }
+        ]
+    },
+    {
+        "id": "bottone_199",
+        "content": [
+            "text: Lahko je! Kaj počnemo? Sediš na klopi in čakaš! Mogoče nocoj se kaj pojavi… kje‑kjer… kdo ve!"
+        ],
+        "choices": [
+            {
+                "0": "Sem na dopustu…",
+                "next_node": "bottone_203"
+            }
+        ]
+    },
+    {
+        "id": "bottone_200",
+        "content": [
+            "text: Lahko je, ampak kako naj preberemo…",
+            "text: Od zgoraj…",
+            "text: Počakaj, poglejmo, če je v bližini platforma, stolp, cerkev… kaj koristnega za plezanje…",
+            "text: Počakaj…",
+            "text: Počakaj!!!",
+            "text: Pošiljam glasovno sporočilo!",
+            "audio: VOCALE_37.mp3",
+            "text: 📍 Se vidimo tukaj! 📍",
+            "map: 45.95722248881008, 13.647984590649967"
+        ],
+        "choices": [
+            {
+                "0": "Sem na plastiku",
+                "next_node": "bottone_204"
+            }
+        ]
+    },
+    {
+        "id": "bottone_201",
+        "content": [
+            "text: Lahko je! Seveda! Mogoče je Nova Gorica izbrana mesto s strani tujcev, da začnejo kolonizirati Zemljo in govorijo posebni jezik, ki ga je poznal Ravnikar! Šef! Si genij! Poskusi priti do nekoga! Poskusi gestikulirati, izgovoriti kakšen čuden zvok, nekaj grlenega! Naj ljudje vedo, kdo so!"
+        ],
+        "choices": [
+            {
+                "0": "Ne bom niti pomislil!",
+                "next_node": "bottone_203"
+            }
+        ]
+    },
+    {
+        "id": "bottone_202",
+        "content": [
+            "text: V redu, potem pustimo! Pozabimo na to veselje in se vrnimo k običajnim dolgočasnim opravilom!"
+        ],
+        "choices": [
+            {
+                "0": "Pozabi!",
+                "next_node": "bottone_203"
+            }
+        ]
+    },
+    {
+        "id": "bottone_203",
+        "content": [
+            "text: 😬",
+            "text: Drugi predlogi?"
+        ],
+        "choices": [
+            {
+                "0": "Da se sporočilo bere samo ponoči?",
+                "next_node": "bottone_199"
+            },
+            {
+                "0": "Da se sporočilo bere samo od zgoraj?",
+                "next_node": "bottone_200"
+            },
+            {
+                "0": "Da je sporočilo v tujem jeziku?",
+                "next_node": "bottone_201"
+            },
+            {
+                "0": "Po mojem je to norček…",
+                "next_node": "bottone_202"
+            }
+        ]
+    },
+    {
+        "id": "bottone_204",
+        "content": [
+            "audio: VOCALE_38.mp3",
+            "text: 👎"
+        ],
+        "choices": [
+            {
+                "0": "Zgodi se.",
+                "next_node": "bottone_205"
+            },
+            {
+                "0": "Začetnik…",
+                "next_node": "bottone_206"
+            },
+            {
+                "0": "Mi, detektivje, smo tako…",
+                "next_node": "bottone_207"
+            }
+        ]
+    },
+    {
+        "id": "bottone_205",
+        "content": [
+            "text: 💛",
+            "text: Tukaj je celotna karta!",
+            "image: shared/30 mappa completa.jpg"
+        ],
+        "choices": [
+            {
+                "0": "Karto analizirana!",
+                "next_node": "bottone_208"
+            }
+        ]
+    },
+    {
+        "id": "bottone_206",
+        "content": [
+            "text: Ne kot ti, šef!",
+            "text: Tukaj je celotna karta!",
+            "image: shared/30 mappa completa.jpg"
+        ],
+        "choices": [
+            {
+                "0": "Karto analizirana!",
+                "next_node": "bottone_208"
+            }
+        ]
+    },
+    {
+        "id": "bottone_207",
+        "content": [
+            "text: Zunaj hrustljav, znotraj mehko?  🍫🍫🍫",
+            "text: Tukaj je celotna karta!",
+            "image: shared/30 mappa completa.jpg"
+        ],
+        "choices": [
+            {
+                "0": "Karto analizirana!",
+                "next_node": "bottone_208"
+            }
+        ]
+    },
+    {
+        "id": "bottone_208",
+        "content": [
+            "text: Dobro.",
+            "text: Imam idejo.",
+            "text: Pošlji mi fotografijo plastike. Poskusi jo posneti od zgoraj, da je vse vidno. Pojdi na nekaj visokega ali kaj podobnega…"
+        ],
+        "ai_fallback": {
+            "prompt": "Uporabnik ti mora poslati fotografijo.",
+            "succes_condition": "Uporabnik mora poslati fotografijo. Počakaj, da pošlje fotografijo, preden nadaljuješ na naslednji vozlišče.",
+            "next_node": "invio_di_una_foto_3"
+        }
+    },
+    {
+        "id": "invio_di_una_foto_3",
+        "content": [
+            "text: Hvala, šef! Spravim v arhiv",
+            "text: Sedaj jo pošljem v OCR."
+        ],
+        "choices": [
+            {
+                "0": "Odlična ideja.",
+                "next_node": "bottone_230"
+            },
+            {
+                "0": "En… kaj?",
+                "next_node": "bottone_231"
+            }
+        ]
+    },
+    {
+        "id": "bottone_230",
+        "content": [
+            "text: Izvedeno!",
+            "text: Končano."
+        ],
+        "choices": [
+            {
+                "0": "Res?",
+                "next_node": "bottone_232a"
+            }
+        ]
+    },
+    {
+        "id": "bottone_231",
+        "content": [
+            "text: Optično prepoznavanje znakov! Algoritem, ki prepozna znake v abecedi…",
+            "text: Končano."
+        ],
+        "choices": [
+            {
+                "0": "Res?",
+                "next_node": "bottone_232a"
+            }
+        ]
+    },
+    {
+        "id": "bottone_232a",
+        "content": [
+            "text: 🌩️ Sem strela, šef! 🌩️",
+            "text: OCR je razločil te znake.",
+            "text: Zdi se, da sta dve besedi, ena pet črk, druga tri.",
+            "image: 31 caratteri isolati SL.jpg",
+            "text: Zdaj je na tebi, šef. Kaj je prva beseda?"
+        ],
+        "validation": {
+            "accepted_answers": [
+                "peace",
+                "pace",
+                "mir"
+            ],
+            "correct_node": "bottone_233",
+            "fallback_node": "nodo_aiuto_peace",
+            "max_attempts": 3,
+            "error_messages": [
+                "text: Hmm… ni prav. Poglej bolj natančno napis.",
+                "text: Gre za angleško ali slovensko besedo… poskusi znova.",
+                "text: Pomisli, kaj je bilo napisano na vgravuri."
+            ]
+        }
+    },
+    {
+        "id": "nodo_aiuto_peace",
+        "content": [
+            "text: Mah… še vedno ne razumem… zdi se vse nesmiselno…",
+            "text: Nič, šef… morda je bolje pustiti.",
+            "text: Če je to rešitev uganke, imam občutek, da smo na napačni poti: morda smo se prepričali v idejo, da je v Nova Gorici skriti zaklad…",
+            "text: Pustimo to.",
+            "text: Škoda, vendar sem pravkar našel nekaj, kar mi je dajal upanje v velik zaključek."
+        ],
+        "choices": [
+            {
+                "0": "Kaj?",
+                "next_node": "bottone_233"
+            }
+        ]
+    },
+    {
+        "id": "bottone_232b",
+        "content": [
+            "text: “Peace”… mir v angleščini?",
+            "text: In druga beseda?"
+        ],
+        "validation": {
+            "accepted_answers": [
+                "mir",
+                "peace",
+                "pace"
+            ],
+            "correct_node": "bottone_233",
+            "fallback_node": "nodo_aiuto_mir",
+            "max_attempts": 3,
+            "error_messages": [
+                "text: Ni to. Pomisli na prevod v slovenščino.",
+                "text: Gre za besedo za “mir” v drugem jeziku.",
+                "text: Ponovno poglej napis na vgravuri."
+            ]
+        }
+    },
+    {
+        "id": "nodo_aiuto_mir",
+        "content": [
+            "text: Mah… še vedno ne razumem… zdi se vse nesmiselno… Kaj imata ti dve besedi skupnega? Ne vidim ključa za razlago.",
+            "text: Če je to rešitev uganke, imam občutek, da smo na napačni poti. Morda je bolje pustiti.",
+            "text: Oprosti, da sem te vlekla v to avanturo, a zdaj sem utrujena in se bojim, da smo se prepričali v idejo, da je v Nova Gorici skriti zaklad…",
+            "text: Pustimo to.",
+            "text: Škoda, vendar sem pravkar našel nekaj, kar mi je dajal upanje v velik zaključek."
+        ],
+        "choices": [
+            {
+                "0": "Kaj?",
+                "next_node": "bottone_233"
+            }
+        ]
+    },
+    {
+        "id": "bottone_233",
+        "content": [
+            "image: 32 blog novak SL.jpg"
+        ],
+        "choices": [
+            {
+                "0": "Prebral!",
+                "next_node": "bottone_209"
+            },
+            {
+                "0": "Kakšna zgodba…",
+                "next_node": "bottone_209"
+            },
+            {
+                "0": "Vse se sklada!",
+                "next_node": "bottone_209"
+            }
+        ]
+    },
+    {
+        "id": "bottone_209",
+        "content": [
+            "text: In tako je naš Ernesto Branca verjetno izzval.",
+            "text: Morda je spremenil identiteto, da se zaščiti.",
+            "text: Zagotovo je izginil v izgnanstvo: “uspešno izgnanstvo”... Hehehehe...",
+            "text: Predstavljam si ga nekje v Južni Ameriki… v barelu na tropski plaži!"
+        ],
+        "choices": [
+            {
+                "0": "Se strinjam.",
+                "next_node": "bottone_214"
+            },
+            {
+                "0": "Ali pa agencija za preiskave.",
+                "next_node": "bottone_214"
+            },
+            {
+                "0": "Ali pa igralnica…",
+                "next_node": "bottone_214"
+            }
+        ]
+    },
+    {
+        "id": "bottone_214",
+        "content": [
+            "text: Ne vem zakaj, a nekaj mi pravi, da se bomo še srečali v naših preiskavah.",
+            "text: Nikoli ne veš.",
+            "text: No, želiš… se vrniti v dopust, zdaj?",
+            "text: 😁"
+        ],
+        "choices": [
+            {
+                "0": "Zakaj ne?",
+                "next_node": "bottone_217"
+            }
+        ]
+    },
+    {
+        "id": "bottone_217",
+        "content": [
+            "text: Primer končan, šef?"
+        ],
+        "choices": [
+            {
+                "0": "Primer končan.",
+                "next_node": "bottone_300"
+            }
+        ]
+    }
+]

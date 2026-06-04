@@ -1,0 +1,2967 @@
+[
+  {
+    "id": "avvia",
+    "content": [
+      "text: Hey! Sei a Nova Gorica, giusto?",
+      "text: Dai fammi sapere che non vedo l’ora di sentirti!"
+    ],
+    "ai_fallback": {
+      "prompt": "Se l'utente risponde con qualcosa che conferma la sua presenza o interesse, prosegui con 'risposta_libera_1'. Altrimenti chiedi gentilmente di rispondere con un sì",
+      "next_node": "risposta_libera_1"
+    }
+  },
+  {
+    "id": "risposta_libera_1",
+    "content": [
+      "text: ✌️",
+      "text: Come stai? Ti stai rilassando?"
+    ],
+    "ai_fallback": {
+      "prompt": "Stai rompendo il ghiaccio. Non importa se l'utente è stressato o felice. Aspetta che l'utente risponda alla tua domanda",
+      "next_node": "risposta_libera_2"
+    }
+  },
+  {
+    "id": "risposta_libera_2",
+    "content": [
+      "text: Io sto alla grande e ho una novità da paura!",
+      "text: Per prima cosa… un pochino di cose tecniche!",
+      "text: Useremo questa piattaforma per comunicare: ci aiuterà a condividere più velocemente le informazioni.",
+      "text: È facile da usare: praticamente scegli e clicchi. Prova, Capo!",
+      "text: ⬇️⬇️⬇️"
+    ],
+    "choices": [
+      {
+        "0": "Ho capito",
+        "next_node": "bottone_1a"
+      },
+      {
+        "1": "Non chiamarmi \"Capo\"",
+        "next_node": "bottone_1b"
+      }
+    ]
+  },
+  {
+    "id": "bottone_1a",
+    "content": [
+      "text: Ottimo!"
+    ],
+    "open": {
+      "next_node": "bottone_2"
+    }
+  },
+  {
+    "id": "bottone_1b",
+    "content": [
+      "text: ... Come dici tu, Capo. 😏"
+    ],
+    "open": {
+      "next_node": "bottone_2"
+    }
+  },
+  {
+    "id": "bottone_2",
+    "content": [
+      "text: Hai gli auricolari? Mettili che ti mando un vocale!",
+      "text: Mi raccomando: ascolta tutto con attenzione perché sto per stupirti!",
+      "audio: VOCALE_1.mp3",
+      "text: Ci sei?"
+    ],
+    "choices": [
+      {
+        "0": "Vai!",
+        "next_node": "bottone_3"
+      }
+    ]
+  },
+  {
+    "id": "bottone_3",
+    "content": [
+      "audio: VOCALE_2.mp3",
+      "text: 🕵️‍♂️"
+    ],
+    "choices": [
+      {
+        "0": "E come fai a saperlo?",
+        "next_node": "bottone_4"
+      },
+      {
+        "1": "Branca Detective?",
+        "next_node": "bottone_4"
+      },
+      {
+        "2": "Mai sentito",
+        "next_node": "bottone_4"
+      },
+      {
+        "3": "Come il calciatore anni '90?",
+        "next_node": "bottone_4"
+      }
+    ]
+  },
+  {
+    "id": "bottone_4",
+    "content": [
+      "text: Guarda qui!",
+      "image: shared/02 branca detective.jpg"
+    ],
+    "choices": [
+      {
+        "0": "Incredibile!",
+        "next_node": "bottone_5"
+      },
+      {
+        "1": "Che...bizzarra coincidenza!",
+        "next_node": "bottone_5"
+      },
+      {
+        "2": "Molto professionale...",
+        "next_node": "bottone_5"
+      },
+      {
+        "3": "😳",
+        "next_node": "bottone_5"
+      }
+    ]
+  },
+  {
+    "id": "bottone_5",
+    "content": [
+      "text: Vero? Ma c’è di più! Mando vocale!",
+      "audio: VOCALE_3.mp3"
+    ],
+    "choices": [
+      {
+        "0": "Manda!",
+        "next_node": "bottone_7"
+      }
+    ]
+  },
+  {
+    "id": "bottone_7",
+    "content": [
+      "image: 03 giornali sul tavolo IT.jpg",
+      "text: Ed eccoti una versione consultabile con le traduzioni del caso (lunga vita ai traduttori automatici!).",
+      "pdf: 04 rassegna stampa IT.pdf",
+      "text: Fammi sapere quando hai letto!"
+    ],
+    "choices": [
+      {
+        "0": "Letto tutto",
+        "next_node": "bottone_8"
+      },
+      {
+        "1": "Cosa mi stai per chiedere?",
+        "next_node": "bottone_8"
+      },
+      {
+        "2": "🫣",
+        "next_node": "bottone_8"
+      }
+    ]
+  },
+  {
+    "id": "bottone_8",
+    "content": [
+      "audio: VOCALE_4.mp3",
+      "image: shared/05 branca e milli.jpg"
+    ],
+    "choices": [
+      {
+        "0": "Chi è quella con lui?",
+        "next_node": "bottone_11"
+      }
+    ]
+  },
+  {
+    "id": "bottone_11",
+    "content": [
+      "text: Milena, la sua assistente, che lui chiamava Milli…",
+      "text: O così mi sembra di intuire dai vari biglietti che ho trovato in giro per l’ufficio."
+    ],
+    "choices": [
+      {
+        "0": "Sembra sapere il fatto suo",
+        "next_node": "bottone_12a"
+      },
+      {
+        "1": "Un tipo... pittoresco",
+        "next_node": "bottone_12a"
+      },
+      {
+        "2": "Un tenente Colombo da discount",
+        "next_node": "bottone_12a"
+      },
+      {
+        "3": "Una faccia qualunque",
+        "next_node": "bottone_12b"
+      }
+    ]
+  },
+  {
+    "id": "bottone_12a",
+    "content": [
+      "text: Ahahahaha! Concordo! E ti faccio sentire… la sua voce!"
+    ],
+    "open": {
+      "next_node": "bottone_13"
+    }
+  },
+  {
+    "id": "bottone_12b",
+    "content": [
+      "text: Tu dici? Dovresti sentire la sua voce!"
+    ],
+    "open": {
+      "next_node": "bottone_13"
+    }
+  },
+  {
+    "id": "bottone_13",
+    "content": [
+      "text: Milli ha conservato le cassette della segreteria telefonica che lui usava per aggiornarla sulle indagini… erano altri tempi, Capo, non avevano tutta la nostra tecnologia… altro che i messaggi vocali che ti mando io!",
+      "text: I \"brevi\" messaggi vocali che tanto apprezzi...",
+      "text: Play!",
+      "text: ▶️▶️▶️",
+      "audio: VOCALE_5.mp3",
+      "text: Tu che dici?"
+    ],
+    "choices": [
+      {
+        "0": "Qualcosa non quadra.",
+        "next_node": "bottone_18a"
+      },
+      {
+        "1": "Che è strano!",
+        "next_node": "bottone_18a"
+      },
+      {
+        "2": "Branca la cercava... e l'ha uccisa?",
+        "next_node": "bottone_18a"
+      },
+      {
+        "3": "Che sono in vacanza.",
+        "next_node": "bottone_18b"
+      }
+    ]
+  },
+  {
+    "id": "bottone_18a",
+    "content": [
+      "text: Appunto! La cosa non quadra, Capo, soprattutto perché l’indagine era ormai chiusa!"
+    ],
+    "open": {
+      "next_node": "bottone_20"
+    }
+  },
+  {
+    "id": "bottone_18b",
+    "content": [
+      "text: Lo so, ecco perché condivido con te queste storie intriganti! Per farti staccare un po’ la testa dal lavoro, Capo! 😂"
+    ],
+    "open": {
+      "next_node": "bottone_20"
+    }
+  },
+  {
+    "id": "bottone_20",
+    "content": [
+      "text: Senti come va avanti!",
+      "audio: VOCALE_6_01.mp3",
+      "audio: VOCALE_6_02.mp3",
+      "audio: VOCALE_6_03.mp3",
+      "audio: VOCALE_6_04.mp3",
+      "text: Ma..."
+    ],
+    "choices": [
+      {
+        "0": "Ma?",
+        "next_node": "bottone_21"
+      },
+      {
+        "1": "Ho paura...",
+        "next_node": "bottone_21"
+      },
+      {
+        "2": "🤐",
+        "next_node": "bottone_21"
+      }
+    ]
+  },
+  {
+    "id": "bottone_21",
+    "content": [
+      "text: C’è un altro nastro.",
+      "text: Te lo faccio sentire e poi mi dirai cosa ne pensi.",
+      "audio: VOCALE_7_01.mp3",
+      "audio: VOCALE_7_02.mp3",
+      "text: Eddaiiiiiiii! 👼🥺"
+    ],
+    "choices": [
+      {
+        "0": " Va bene! Facciamolo!",
+        "next_node": "bottone_29"
+      },
+      {
+        "1": "😑 Roviniamoci le ferie...",
+        "next_node": "bottone_29"
+      },
+      {
+        "2": "Così? Pro Bono?",
+        "next_node": "bottone_31"
+      },
+      {
+        "3": "Sinceramente? Non ne ho voglia.",
+        "next_node": "bottone_32"
+      }
+    ]
+  },
+  {
+    "id": "bottone_31",
+    "content": [
+      "text: Sì, ma per la nobile causa della Giustizia. ⚖️",
+      "text: Tipo gli Avengers…",
+      "text: Allora?"
+    ],
+    "choices": [
+      {
+        "0": " Va bene! Facciamolo!",
+        "next_node": "bottone_29"
+      },
+      {
+        "1": "No. È la mia risposta definitiva.",
+        "next_node": "bottone_33"
+      }
+    ]
+  },
+  {
+    "id": "bottone_32",
+    "content": [
+      "text: Capo! Ma guarda che questa è una questione importante! C’è l’onore della nostra categoria da difendere! Un collega detective e noi sappiamo che, probabilmente, è stato incastrato in un affare losco… Vuoi rinunciare davvero?"
+    ],
+    "choices": [
+      {
+        "0": " Va bene! Facciamolo!",
+        "next_node": "bottone_29"
+      },
+      {
+        "1": "No. È la mia risposta definitiva.",
+        "next_node": "bottone_33"
+      }
+    ]
+  },
+  {
+    "id": "bottone_33",
+    "content": [
+      "text: E va bene, non sono riuscita a trascinarti in quest’avventura.",
+      "text: Offesa? Io? Ma no!",
+      "text: ...",
+      "text: Figurati...",
+      "text: ...",
+      "text: (vedi di portarmi qualcosa, ora che torni dalle vacanze, che le chiavi del nuovo ufficio… non le hai ancora)",
+      "text: 💀⚰️💀⚰️💀⚰️💀"
+    ],
+    "choices": [
+      {
+        "0": "Diana... 🙄",
+        "next_node": "bottone_34"
+      },
+      {
+        "1": " Adoro i tuoi teschietti.",
+        "next_node": "bottone_34"
+      },
+      {
+        "2": "Ti stupirò.",
+        "next_node": "bottone_34"
+      }
+    ]
+  },
+  {
+    "id": "bottone_34",
+    "content": [
+      "text: ❤️",
+      "text: Scherzo, Capo!",
+      "text: Buone scoperte a Nova Gorica!",
+      "text: Caso chiuso?"
+    ],
+    "choices": [
+      {
+        "0": "Caso chiuso.",
+        "next_node": "bottone_300"
+      }
+    ]
+  },
+  {
+    "id": "bottone_300",
+    "content": [
+      "text: 🎊 THE END 🎊",
+      "text: Grazie per aver partecipato a Nova Gorica Cold Case!",
+      "audio: sigla_ita.mp3",
+      "text: Concept, drammaturgia Stefano Beghi e Riccardo Tabilio",
+      "text: Sviluppo software Marco Prestigiacomo",
+      "text: Voci Emanuele Arrigazzi, Peter Harl, Patrizia Jurinčič Finžgar, Anuša Kodelja, Susanna Miotto, Alice Pavan",
+      "text: e di Riccardo Tabilio, Margherita Squaiella, David Kožuh, Rok Bavčar",
+      "text: Grafiche Riccardo Tabilio e Midjourney",
+      "text: Disegno sonoro e musiche originali Stefano Beghi e Suno",
+      "text: Traduzioni Janja Zavrtanik",
+      "text: Progetto artistico Officina Carbonara",
+      "text: Produzione Karakorum S.R.L. Impresa Sociale e Quarantasettezeroquattro",
+      "text: In collaborazione con il Goriški Muzej di Nova Gorica",
+      "text: RA – Realtà aumentate / Obogatene resničnosti",
+      "text: Il progetto è finanziato dall’Unione europea nell’ambito del Fondo per piccoli progetti (Small Project Fund) GO! 2025 del Programma Interreg VI-A Italia-Slovenia 2021-2027, gestito dal GECT GO. Projekt financira Evropska unija iz Sklada za male projekte GO! 2025 Programa Interreg VI-A Italija-Slovenija 2021-2027, ki ga upravlja EZTS GO.",
+      "text: INFO www.euro-go.eu/it/ | www.ita-slo.eu/it",
+      "text: La storia raccontata in Nova Gorica Cold Case è una storia di fantasia, seppur calata nella Storia con la S maiuscola: eventi, personaggi e documenti presentati sono da ritenersi frutto della creatività degli autori."
+    ],
+    "choices": [
+      {
+        "0": "Dicci come è stata la tua esperienza.",
+        "next_node": "bottone_301"
+      },
+      {
+        "1": "Scopri chi siamo.",
+        "next_node": "bottone_302"
+      },
+      {
+        "2": "Scopri cosa fare a Nova Gorica.",
+        "next_node": "bottone_303"
+      },
+      {
+        "3": "Visita il Goriški Muzej.",
+        "next_node": "bottone_304"
+      }
+    ]
+  },
+  {
+    "id": "bottone_301",
+    "content": [
+      "text: Raccontaci come è andata, qui!",
+      "text: https://docs.google.com/forms/d/e/1FAIpQLSe3rmrOO7Kk0-nANmVxYF_f_I3mrUdPWvFtek59JiRem625Kw/viewform"
+    ],
+    "choices": [
+      {
+        "0": "Dicci come è stata la tua esperienza.",
+        "next_node": "bottone_301"
+      },
+      {
+        "1": "Scopri chi siamo.",
+        "next_node": "bottone_302"
+      },
+      {
+        "2": "Scopri cosa fare a Nova Gorica.",
+        "next_node": "bottone_303"
+      },
+      {
+        "3": "Visita il Goriški Muzej.",
+        "next_node": "bottone_304"
+      }
+    ]
+  },
+  {
+    "id": "bottone_302",
+    "content": [
+      "text: Visita i nostri siti!",
+      "text: www.officinacarbonara.eu",
+      "text: www.invisiblecities.it"
+    ],
+    "choices": [
+      {
+        "0": "Dicci come è stata la tua esperienza.",
+        "next_node": "bottone_301"
+      },
+      {
+        "1": "Scopri chi siamo.",
+        "next_node": "bottone_302"
+      },
+      {
+        "2": "Scopri cosa fare a Nova Gorica.",
+        "next_node": "bottone_303"
+      },
+      {
+        "3": "Visita il Goriški Muzej.",
+        "next_node": "bottone_304"
+      }
+    ]
+  },
+  {
+    "id": "bottone_303",
+    "content": [
+      "text: Dai un'occhiata qui!",
+      "text: https://www.go2025.eu"
+    ],
+    "choices": [
+      {
+        "0": "Dicci come è stata la tua esperienza.",
+        "next_node": "bottone_301"
+      },
+      {
+        "1": "Scopri chi siamo.",
+        "next_node": "bottone_302"
+      },
+      {
+        "2": "Scopri cosa fare a Nova Gorica.",
+        "next_node": "bottone_303"
+      },
+      {
+        "3": "Visita il Goriški Muzej.",
+        "next_node": "bottone_304"
+      }
+    ]
+  },
+  {
+    "id": "bottone_304",
+    "content": [
+      "text: Ecco il sito del Goriški Muzej:",
+      "text: https://goriskimuzej.si/it"
+    ],
+    "choices": [
+      {
+        "0": "Dicci come è stata la tua esperienza.",
+        "next_node": "bottone_301"
+      },
+      {
+        "1": "Scopri chi siamo.",
+        "next_node": "bottone_302"
+      },
+      {
+        "2": "Scopri cosa fare a Nova Gorica.",
+        "next_node": "bottone_303"
+      },
+      {
+        "3": "Visita il Goriški Muzej.",
+        "next_node": "bottone_304"
+      }
+    ]
+  },
+  {
+    "id": "bottone_29",
+    "content": [
+      "text: Sei un fenomeno, Capo! 🎉",
+      "text: Ti adoro!",
+      "text: Sei il mio idolo!",
+      "text: Magari in bagno mettiamo un poster con la tua gigantografia, invece che i Creedence!",
+      "text: 😆",
+      "text: Al lavoro, allora! Mando vocale!",
+      "audio: VOCALE_8.mp3",
+      "text: Ecco le coordinate!",
+      "map: 45.954940972992574, 13.645351568155807",
+      "audio: VOCALE_9_01.mp3",
+      "audio: VOCALE_9_02.mp3",
+      "audio: VOCALE_9_03.mp3",
+      "text: Quando hai raggiunto la posizione fammi sapere!"
+    ],
+    "choices": [
+      {
+        "0": "Ci sono!",
+        "next_node": "bottone_36b"
+      }
+    ]
+  },
+  {
+    "id": "bottone_36b",
+    "content": [
+      "text: Bravo Capo! Ti meriti un premio! Ti mando la foto di Branca partigiano.",
+      "image: 06 partigiani IT.jpg",
+      "text: Però mandami una foto anche tu, dai!",
+      "text: Sono curiosa di vedere il luogo del delitto 🚔",
+      "text: (Sai come si fa, no?)"
+    ],
+    "choices": [
+      {
+        "0": "Sì, non sono così boomer...",
+        "next_node": "bottone_36c"
+      },
+      {
+        "1": "Meglio se mi spieghi.",
+        "next_node": "bottone_36d"
+      }
+    ]
+  },
+  {
+    "id": "bottone_36c",
+    "content": [
+      "text: Manda foto, allora! Sono curiosa!"
+    ],
+    "ai_fallback": {
+      "prompt": "L'utente ti deve mandare una foto sul luogo del delitto.",
+      "succes_condition": "L'utente deve inviare una foto. Aspetta che invii la foto prima di continuare al prossimo nodo.",
+      "next_node": "invio_di_una_foto"
+    }
+  },
+  {
+    "id": "bottone_36d",
+    "content": [
+      "text: Ecco!",
+      "video: video_tutorial_foto.mp4",
+      "text: Aspetto la tua foto!"
+    ],
+    "ai_fallback": {
+      "prompt": "L'utente ti deve mandare una foto sul luogo del delitto.",
+      "succes_condition": "L'utente deve inviare una foto. Aspetta che invii la foto prima di continuare al prossimo nodo.",
+      "next_node": "invio_di_una_foto"
+    }
+  },
+  {
+    "id": "invio_di_una_foto",
+    "content": [
+      "text: Grazie, capo! La metto in archivio",
+      "text: Che posto!",
+      "text: 😬",
+      "text: Una parte di me sta per chiederti se vuoi andare dentro a chiedere “Posso avere informazioni sull’omicidio che avete avuto qui dentro nel 1990?” …"
+    ],
+    "choices": [
+      {
+        "0": "☠️ DIANA!!! ☠️",
+        "next_node": "bottone_37a"
+      },
+      {
+        "1": "Mai e poi mai.",
+        "next_node": "bottone_37b"
+      },
+      {
+        "2": "Non credo valga la pena.",
+        "next_node": "bottone_37c"
+      },
+      {
+        "3": " Non è il mio stile, baby. 🕵️",
+        "next_node": "bottone_37d"
+      }
+    ]
+  },
+  {
+    "id": "bottone_37a",
+    "content": [
+      "text: Ahahahaah! ☠️"
+    ],
+    "open": {
+      "next_node": "bottone_40"
+    }
+  },
+  {
+    "id": "bottone_37b",
+    "content": [
+      "text: Scherzavo, Capo!"
+    ],
+    "open": {
+      "next_node": "bottone_40"
+    }
+  },
+  {
+    "id": "bottone_37c",
+    "content": [
+      "text: Già."
+    ],
+    "open": {
+      "next_node": "bottone_40"
+    }
+  },
+  {
+    "id": "bottone_37d",
+    "content": [
+      "text: 💛"
+    ],
+    "open": {
+      "next_node": "bottone_40"
+    }
+  },
+  {
+    "id": "bottone_40",
+    "content": [
+      "text: Ma magari entra comunque. Perché no? Ti imbarazza? Fai finta di essere al telefono!",
+      "text: (Vecchio trucco per non farsi attaccare bottone.)",
+      "text: Forse respirare un po’ l’atmosfera da Casinò può aiutarci a farci qualche idea sul caso… Entra, dai! Anche solo nella hall!",
+      "text: Intanto ti dico due cose che ho scoperto.",
+      "audio: VOCALE_10.mp3"
+    ],
+    "choices": [
+      {
+        "0": "C'è altro?",
+        "next_node": "bottone_43"
+      }
+    ]
+  },
+  {
+    "id": "bottone_43",
+    "content": [
+      "audio: VOCALE_11.mp3",
+      "text: Sei dentro?"
+    ],
+    "choices": [
+      {
+        "0": "Sì.",
+        "next_node": "bottone_44"
+      },
+      {
+        "1": "NON CI ENTRO!",
+        "next_node": "bottone_45"
+      }
+    ]
+  },
+  {
+    "id": "bottone_44",
+    "content": [
+      "text: Dai, mandami un vocale per raccontarmi le tue impressioni. Te l’aspettavi così un casinò di Nova Gorica?",
+      "text: O già lo conoscevi questo posto? ♥️♣️♦️♠️ 📉 💸💸💸",
+      "text: Casomai esci… non è il caso che ti sentano."
+    ],
+    "ai_fallback": {
+      "prompt": "L'utente ti deve mandare messaggio vocale.",
+      "succes_condition": "L'utente deve inviare un messaggio vocale. Aspetta che invii il messaggio vocale prima di passare al prossimo nodo.",
+      "next_node": "invio_di_un_messaggio_vocale"
+    }
+  },
+  {
+    "id": "invio_di_un_messaggio_vocale",
+    "content": [
+      "text: Heh! Capito, Capo!",
+      "text: Dai, proviamo a immaginare cosa possa essere successo a Branca.",
+      "text: In che direzione potrebbe essere scappato?",
+      "text: Dove potrebbe essersi nascosto?!",
+      "text: Entriamo nella situazione! Ma sì, con quel tuo stile alla Detective Cooper!… O era Jessica Fletcher? 🤔",
+      "image: shared/07 hotel park.jpg",
+      "text: Sugli articoli dei giornali c’è questa foto. ⬆️⬆️⬆️",
+      "text: Gli articoli sull’omicidio dicono che è saltato giù da un balconcino al primo piano.",
+      "text: Il Park deve essere decisamente cambiato in tutti questi anni. Ma forse il nucleo originale dell’albergo è ancora visibile, da qualche angolazione. E magari c’è ancora il balconcino da cui è scappato Branca!",
+      "text: Vedi se lo trovi!"
+    ],
+    "choices": [
+      {
+        "0": "Trovato!",
+        "next_node": "bottone_47"
+      },
+      {
+        "1": "Nisba...",
+        "next_node": "bottone_48"
+      }
+    ]
+  },
+  {
+    "id": "bottone_45",
+    "content": [
+      "text: Uff…",
+      "text: Dai, proviamo a immaginare cosa possa essere successo a Branca.",
+      "text: In che direzione potrebbe essere scappato?",
+      "text: Dove potrebbe essersi nascosto?!",
+      "text: Entriamo nella situazione! Ma sì, con quel tuo stile alla Detective Cooper!… O era Jessica Fletcher? 🤔",
+      "image: shared/07 hotel park.jpg",
+      "text: Sugli articoli dei giornali c’è questa foto. ⬆️⬆️⬆️",
+      "text: Gli articoli sull’omicidio dicono che è saltato giù da un balconcino al primo piano.",
+      "text: Il Park deve essere decisamente cambiato in tutti questi anni. Ma forse il nucleo originale dell’albergo è ancora visibile, da qualche angolazione. E magari c’è ancora il balconcino da cui è scappato Branca!",
+      "text: Vedi se lo trovi!"
+    ],
+    "choices": [
+      {
+        "0": "Trovato!",
+        "next_node": "bottone_47"
+      },
+      {
+        "1": "Nisba...",
+        "next_node": "bottone_48"
+      }
+    ]
+  },
+  {
+    "id": "bottone_47",
+    "content": [
+      "text: Presto: mandami una foto! 📸"
+    ],
+    "ai_fallback": {
+      "prompt": "L'utente ti deve mandare una foto su quello che ha trovato nella foto hotel_park.jpg sugli articoli dei giornali.",
+      "succes_condition": "L'utente deve inviare una foto. Aspetta che invii la foto prima di continuare al prossimo nodo.",
+      "next_node": "invio_di_una_foto_2"
+    }
+  },
+  {
+    "id": "invio_di_una_foto_2",
+    "content": [
+      "text: Grazie, capo! La metto in archivio",
+      "text: Ci può stare!",
+      "text: Bel colpo, Capo!",
+      "audio: VOCALE_12.mp3",
+      "text: Ops... credo di aver fatto un pasticcio..."
+    ],
+    "choices": [
+      {
+        "0": " DIANA?",
+        "next_node": "bottone_49"
+      },
+      {
+        "1": "Hai già rotto l'ufficio nuovo?",
+        "next_node": "bottone_49"
+      },
+      {
+        "2": "Stai bene?",
+        "next_node": "bottone_49"
+      },
+      {
+        "3": "😐",
+        "next_node": "bottone_49"
+      }
+    ]
+  },
+  {
+    "id": "bottone_48",
+    "content": [
+      "text: Peccato. Allora sarà tutto cambiato. Ma proviamo a seguirlo con l’immaginazione.",
+      "audio: VOCALE_12.mp3",
+      "text: Ops... credo di aver fatto un pasticcio..."
+    ],
+    "choices": [
+      {
+        "0": " DIANA?",
+        "next_node": "bottone_49"
+      },
+      {
+        "1": "Hai già rotto l'ufficio nuovo?",
+        "next_node": "bottone_49"
+      },
+      {
+        "2": "Stai bene?",
+        "next_node": "bottone_49"
+      },
+      {
+        "3": "😐",
+        "next_node": "bottone_49"
+      }
+    ]
+  },
+  {
+    "id": "bottone_49",
+    "content": [
+      "image: shared/08 doppiofondo.jpg",
+      "text: Tutto a posto, Capo. Mando vocale!",
+      "audio: VOCALE_13.mp3",
+      "text: ⁉️"
+    ],
+    "choices": [
+      {
+        "0": "Nome già sentito!",
+        "next_node": "bottone_107"
+      },
+      {
+        "1": "Non mi dice niente.",
+        "next_node": "bottone_107"
+      }
+    ]
+  },
+  {
+    "id": "bottone_107",
+    "content": [
+      "text: Ma sì. È il calciatore preferito di Branca. No?",
+      "image: shared/09 luca fusi.jpg",
+      "text: ⬆️ Lui? ⬆️",
+      "audio: VOCALE_14.mp3",
+      "text: Do un occhio?"
+    ],
+    "choices": [
+      {
+        "0": "E me lo chiedi?",
+        "next_node": "bottone_109a"
+      },
+      {
+        "1": "Beh, sì.",
+        "next_node": "bottone_109a"
+      },
+      {
+        "2": "😒 Genio… Boh",
+        "next_node": "bottone_109a"
+      },
+      {
+        "3": "Sì, ma stai calma.",
+        "next_node": "bottone_109b"
+      }
+    ]
+  },
+  {
+    "id": "bottone_109a",
+    "content": [
+      "text: Apro!"
+    ],
+    "open": {
+      "next_node": "bottone_112"
+    }
+  },
+  {
+    "id": "bottone_109b",
+    "content": [
+      "text: 😡 CAPO!!! 😡"
+    ],
+    "open": {
+      "next_node": "bottone_112"
+    }
+  },
+  {
+    "id": "bottone_112",
+    "content": [
+      "audio: VOCALE_15.mp3",
+      "text: Mando foto?"
+    ],
+    "choices": [
+      {
+        "0": "Vai!",
+        "next_node": "bottone_113"
+      }
+    ]
+  },
+  {
+    "id": "bottone_113",
+    "content": [
+      "image: shared/10 mappa strappata.jpg",
+      "text: È… una specie di mappa. Ma sembra strappata!",
+      "text: E c’è… un alfabeto in alto a destra?",
+      "audio: VOCALE_16.mp3",
+      "text: Ah! Se preferisci prenderti del tempo, prima di buttarti nell'indagine, fallo pure.",
+      "text: Questo è un buon momento per una pausa. ☕",
+      "text: Anzi, se vuoi sospendere l'indagine e magari ritornarci più tardi, a mente lucida (o anche domani!) io sono sempre qui.",
+      "text: Ce n'è di roba da fare nel nuovo ufficio! 👩‍🎨🧰👩‍🎨🏗️"
+    ],
+    "choices": [
+      {
+        "0": "Una pausa ci vuole.",
+        "next_node": "bottone_113a"
+      },
+      {
+        "1": "Se tu ci sei, io ci sono!",
+        "next_node": "bottone_113b"
+      }
+    ]
+  },
+  {
+    "id": "bottone_113a",
+    "content": [
+      "text: E come darti torto: questa indagine si preannuncia complessa... meglio affrontarla con la mente fresca e le gambe toniche!",
+      "text: Prenditi tutto il tempo che vuoi: io sono sempre a tua disposizione, Capo, anche a notte fonda!",
+      "text: Quando ci sei, batti un colpo!"
+    ],
+    "choices": [
+      {
+        "0": "Ora ci sono. Ricominciamo!",
+        "next_node": "bottone_113c"
+      }
+    ]
+  },
+  {
+    "id": "bottone_113c",
+    "content": [
+      "text: Evvvaaaaaaiiiiiii 🚀🚀🚀",
+      "text: Non osavo metterti fretta (sei comunque in vacanza) ma qui io non vedo l'ora di scoprire cos'è successoooooo!!!"
+    ],
+    "open": {
+      "next_node": "MENU_OPZIONI_ABCD"
+    },
+    "openNext": "MENU_OPZIONI_ABCD"
+  },
+  {
+    "id": "bottone_113b",
+    "content": [
+      "text: Perfetto!"
+    ],
+    "open": {
+      "next_node": "MENU_OPZIONI_ABCD"
+    },
+    "openNext": "MENU_OPZIONI_ABCD"
+  },
+  {
+    "id": "MENU_OPZIONI_ABCD",
+    "content": [
+      "text: Allora, da dove partiamo?"
+    ],
+    "choices": [
+      {
+        "0": "Dobbiamo stare dietro a Eva.",
+        "next_node": "a)_prima_linea:_eva"
+      },
+      {
+        "1": "Questi Rozental non mi piacciono…",
+        "next_node": "b)_seconda_linea:_rozental"
+      },
+      {
+        "2": "Cos’è l’area cerchiata?",
+        "next_node": "c)_terza_linea:_ruski_bloki"
+      },
+      {
+        "3": "Decidi tu...",
+        "next_node": "bottone_d"
+      }
+    ]
+  },
+  {
+    "id": "bottone_bca_cba",
+    "content": [
+      "text: Chissà...",
+      "text: È sempre più evidente che tutta questa storia giri attorno alla sua storia, al suo passato... ma è tutto davvero troppo confuso..."
+    ],
+    "choices": [
+      {
+        "0": "Proviamo a mettere insieme i pezzi",
+        "next_node": "a)_prima_linea:_eva"
+      }
+    ]
+  },
+  {
+    "id": "a)_prima_linea:_eva",
+    "content": [
+      "audio: VOCALE_21.mp3",
+      "text: Ecco le coordinate!",
+      "map: 45.958617043379476, 13.64888022387638",
+      "audio: VOCALE_22_01.mp3",
+      "audio: VOCALE_22_02.mp3",
+      "audio: VOCALE_22_03.mp3",
+      "audio: VOCALE_22_04.mp3",
+      "audio: VOCALE_22_05.mp3",
+      "audio: VOCALE_22_06.mp3"
+    ],
+    "choices": [
+      {
+        "0": "Eccomi!",
+        "next_node": "bottone_a123"
+      }
+    ]
+  },
+  {
+    "id": "bottone_a123",
+    "content": [
+      "text: Top! Mandami una foto!"
+    ],
+    "ai_fallback": {
+      "prompt": "L'utente ti deve mandare una foto.",
+      "succes_condition": "L'utente deve inviare una foto. Aspetta che invii la foto prima di continuare al prossimo nodo.",
+      "next_node": "invio_foto"
+    }
+  },
+  {
+    "id": "invio_foto",
+    "content": [
+      "text: Grazie, capo! La metto in archivio",
+      "text: Totalmente diverso da com’era! Guarda qui!",
+      "image: shared/14 hotel argonavti.jpg",
+      "text: Ecco com’era l’albergo Argonavti negli anni ‘80… ai tempi del caso, immagino non fosse molto diverso… forse messo un po’ peggio… Branca, nel suo messaggio in segreteria, dice a Milli che nel 1990 era già chiuso.",
+      "text: Mando vocale va’…",
+      "audio: VOCALE_23.mp3",
+      "text: 🎰"
+    ],
+    "choices": [
+      {
+        "0": "Chiaro.",
+        "next_node": "bottone_a124"
+      }
+    ]
+  },
+  {
+    "id": "bottone_a124",
+    "content": [
+      "audio: VOCALE_24_01.mp3",
+      "audio: VOCALE_24_02.mp3",
+      "text: 🛠"
+    ],
+    "choices": [
+      {
+        "0": "Perché non la dinamite? 🧨",
+        "next_node": "bottone_a125"
+      },
+      {
+        "1": "Guarda che ti fai male...",
+        "next_node": "bottone_a126"
+      },
+      {
+        "2": "Provare con la combinazione?",
+        "next_node": "bottone_a127"
+      },
+      {
+        "3": "Tu... il trapano?",
+        "next_node": "bottone_a126"
+      }
+    ]
+  },
+  {
+    "id": "bottone_a125",
+    "content": [
+      "text: Non è esagerato?",
+      "image: shared/33 diana trapano.jpg",
+      "text: Ma...",
+      "text: Mi stai prendendo per i fondelli??!??!?! 🤬",
+      "text: 🤬🤬🤬",
+      "text: Messaggio ricevuto… 😓",
+      "text: Proviamo con la combinazione?",
+      "text: Ma cosa mettoooooo???????",
+      "text: 😤",
+      "text: Mando vocale.",
+      "audio: VOCALE_25.mp3",
+      "text: Allora? Idee su chi possa essere questo tale?",
+      "text: E VEDI DI NON CINCISCHIARE CHE SONO A TANTO COSÌ DA MANDARTI A QUEL PAESEEEE! SCRIVIMI SOLO IL NOME! CHIARO?????"
+    ],
+    "choices": [
+      {
+        "0": "Ok, scusa.",
+        "next_node": "bottone_a128"
+      },
+      {
+        "1": "Nervosetta?",
+        "next_node": "bottone_a128"
+      },
+      {
+        "2": "😶‍🌫️",
+        "next_node": "bottone_a128"
+      },
+      {
+        "3": "Mangiato pane e tenerezza?",
+        "next_node": "bottone_a128"
+      }
+    ]
+  },
+  {
+    "id": "bottone_a126",
+    "content": [
+      "text: Ho fatto ben di peggio in questo ufficio nelle ultime due settimane – e senza il tuo aiuto! Quindi… 🤫",
+      "image: shared/33 diana trapano.jpg",
+      "text: Però… mi sa che è inutile: mi sembra bella spessa. Proviamo con la combinazione?",
+      "text: Ma cosa mettoooooo???????",
+      "text: 😤",
+      "text: Mando vocale.",
+      "audio: VOCALE_25.mp3",
+      "text: Allora? Idee su chi possa essere questo tale?",
+      "text: E VEDI DI NON CINCISCHIARE CHE SONO A TANTO COSÌ DA MANDARTI A QUEL PAESEEEE! SCRIVIMI SOLO IL NOME! CHIARO?????"
+    ],
+    "choices": [
+      {
+        "0": "Ok, scusa.",
+        "next_node": "bottone_a128"
+      },
+      {
+        "1": "Nervosetta?",
+        "next_node": "bottone_a128"
+      },
+      {
+        "2": "😶‍🌫️",
+        "next_node": "bottone_a128"
+      },
+      {
+        "3": "Mangiato pane e tenerezza?",
+        "next_node": "bottone_a128"
+      }
+    ]
+  },
+  {
+    "id": "bottone_a127",
+    "content": [
+      "text: 😁",
+      "image: shared/33 diana trapano.jpg",
+      "text: Ma cosa mettoooooo???????",
+      "text: 😤",
+      "text: Mando vocale.",
+      "audio: VOCALE_25.mp3",
+      "text: Allora? Idee su chi possa essere questo tale?",
+      "text: E VEDI DI NON CINCISCHIARE CHE SONO A TANTO COSÌ DA MANDARTI A QUEL PAESEEEE! SCRIVIMI SOLO IL NOME! CHIARO?????"
+    ],
+    "choices": [
+      {
+        "0": "Ok, scusa.",
+        "next_node": "bottone_a128"
+      },
+      {
+        "1": "Nervosetta?",
+        "next_node": "bottone_a128"
+      },
+      {
+        "2": "😶‍🌫️",
+        "next_node": "bottone_a128"
+      },
+      {
+        "3": "Mangiato pane e tenerezza?",
+        "next_node": "bottone_a128"
+      }
+    ]
+  },
+  {
+    "id": "bottone_a128",
+    "content": [
+      "text: Scrivimi il nome del \"vecchio compagno\" di Branca! Forza!"
+    ],
+    "validation": {
+      "accepted_answers": [
+        "tito",
+        "josip",
+        "broz"
+      ],
+      "correct_node": "risposta_corretta",
+      "fallback_node": "nodo_aiuto_tito",
+      "max_attempts": 3,
+      "error_messages": [
+        "text: Mmm... non mi sembra giusto. Riprova!",
+        "text: Quasi... pensa a chi era il leader della Jugoslavia.",
+        "text: Il nome è nella storia del posto. Chi era il capo partigiano?"
+      ]
+    }
+  },
+  {
+    "id": "nodo_aiuto_tito",
+    "content": [
+      "text: Aspetta capo! Forse ho un’idea... Ho inserito le tue coordinate su un planisfero online e ho cercato di capire che cosa tu possa vedere da dove sei. Ti mando qualche screenshot.",
+      "image: shared/15 tito 1.jpg",
+      "image: shared/16 tito 2.jpg",
+      "image: shared/17 tito 3.jpg",
+      "text: Che dici? Provo a inserire la data di nascita del Maresciallo Tito?"
+    ],
+    "choices": [
+      {
+        "0": "PROVA!",
+        "next_node": "risposta_corretta"
+      },
+      {
+        "1": "Eccola! Ora la vedo...",
+        "next_node": "risposta_corretta"
+      }
+    ]
+  },
+  {
+    "id": "risposta_corretta",
+    "content": [
+      "text: CI SIAMOOOOOO!",
+      "text: Ho inserito la data di nascita di Tito come combinazione. E... si apre, Capo! E ci sono tre foto! Quella di Branca con la scritta Tito, che ti risparmio (tutta sbagliata) e poi queste...",
+      "image: shared/18a eva fotografata da branca.jpg",
+      "image: shared/18b eva fotografata da branca.jpg",
+      "image: shared/18c eva fotografata da branca.jpg",
+      "text: E questa sembra essere l'ultima della serie:",
+      "image: shared/19 inseguitore di eva fotografato da branca.jpg",
+      "text: Mando vocale!",
+      "audio: VOCALE_26.mp3",
+      "text: 🔎"
+    ],
+    "choices": [
+      {
+        "0": "E mi molli così?",
+        "next_node": "bottone_a134"
+      }
+    ]
+  },
+  {
+    "id": "bottone_a134",
+    "content": [
+      "text: Porta pazienza, per una volta."
+    ],
+    "choices": [
+      {
+        "0": "Porto pazienza.",
+        "next_node": "bottone_a135"
+      },
+      {
+        "1": "🤨?",
+        "next_node": "bottone_a135"
+      },
+      {
+        "2": "Ha parlato Gandhi...",
+        "next_node": "bottone_a135"
+      },
+      {
+        "3": "Sarei impaziente, IO?",
+        "next_node": "bottone_a135"
+      }
+    ]
+  },
+  {
+    "id": "bottone_a135",
+    "content": [
+      "text: Capo!!! Non ci crederaiiiiii!!!",
+      "text: Vocale!",
+      "audio: VOCALE_27.mp3"
+    ],
+    "choices": [
+      {
+        "0": "Manda!",
+        "next_node": "bottone_a138b"
+      }
+    ]
+  },
+  {
+    "id": "bottone_a138b",
+    "content": [
+      "image: 20 analisi AI tatuaggio rozental IT.jpg",
+      "text: 😱😱😱😱",
+      "text: Cosa facciamo capoooooo?!?!?"
+    ],
+    "effects": {
+      "eva_done": true
+    },
+    "choices": [
+      {
+        "0": "Dimmi di più",
+        "next_node": "b)_seconda_linea:_rozental",
+        "condition": "eva_done && !rozental_done && !ruski_bloki_done"
+      },
+      {
+        "1": "Calma, stiamo su Eva!",
+        "next_node": "bottone_ac",
+        "condition": "eva_done && !rozental_done && !ruski_bloki_done"
+      },
+      {
+        "2": "Decidi tu.",
+        "next_node": "bottone_ad",
+        "condition": "eva_done && !rozental_done && !ruski_bloki_done"
+      },
+      {
+        "3": "I Rozental iniziano a puzzare di marcio",
+        "next_node": "bottone_cab_acb",
+        "condition": "eva_done && !rozental_done && ruski_bloki_done"
+      },
+      {
+        "4": "Che tutto inizi ai Ruski Bloki?",
+        "next_node": "bottone_abc_bac",
+        "condition": "eva_done && rozental_done && !ruski_bloki_done"
+      },
+      {
+        "5": "Niente panico!",
+        "next_node": "bottone_aexit_bexit_cexit",
+        "condition": "eva_done && rozental_done && ruski_bloki_done"
+      }
+    ]
+  },
+  {
+    "id": "bottone_ac",
+    "content": [
+      "audio: VOCALE_27B.mp3",
+      "audio: VOCALE_27C.mp3",
+      "text: 🏢"
+    ],
+    "choices": [
+      {
+        "0": "Buona idea!",
+        "next_node": "bottone_c+"
+      }
+    ]
+  },
+  {
+    "id": "bottone_cab_acb",
+    "content": [
+      "text: Concordo capo... indaghiamo?"
+    ],
+    "choices": [
+      {
+        "0": "Indaghiamo!",
+        "next_node": "b)_seconda_linea:_rozental"
+      }
+    ]
+  },
+  {
+    "id": "b)_seconda_linea:_rozental",
+    "content": [
+      "text: Rozental!",
+      "text: Innanzitutto… cerchiamo online!",
+      "audio: VOCALE_28.mp3",
+      "image: shared/21 rosa simbolo nova gorica.jpg",
+      "audio: VOCALE_28B.mp3",
+      "text: 🌹"
+    ],
+    "choices": [
+      {
+        "0": "Ok. Numero due?",
+        "next_node": "bottone_b146"
+      }
+    ]
+  },
+  {
+    "id": "bottone_b146",
+    "content": [
+      "text: Guarda qua!",
+      "text: ⬇️⬇️⬇️",
+      "image: 34 articolo rozental 1960 IT.jpg",
+      "text: Non chiedermi come l’ho reso leggibile… perché non lo so nemmeno io! 🤷",
+      "text: Viene da un archivio online di vecchi articoli di giornale. Ma non è specificata la testata.",
+      "text: Leggilo, poi fammi sapere."
+    ],
+    "choices": [
+      {
+        "0": "Ho letto!",
+        "next_node": "bottone_b150"
+      }
+    ]
+  },
+  {
+    "id": "bottone_b150",
+    "content": [
+      "text: Bene. Per cominciare ti porto al monumento all’aviatore Rusjan citato nell’articolo.",
+      "text: Chissà che non porti a qualcosa.",
+      "text: Ecco la posizione!",
+      "map: 45.95623494226689, 13.64677569934882",
+      "audio: VOCALE_29_01.mp3",
+      "audio: VOCALE_29_02.mp3",
+      "audio: VOCALE_29_03.mp3",
+      "text: Quando sei in loco scrivimi!"
+    ],
+    "choices": [
+      {
+        "0": "Sono al monumento.",
+        "next_node": "bottone_b151"
+      }
+    ]
+  },
+  {
+    "id": "bottone_b151",
+    "content": [
+      "text: Bene.",
+      "text: L'articolo firmato dal Circolo Rozental dice che ci sono i resti di un antico cimitero davanti al monumento all'aviatore Rusjan.",
+      "text: Intanto, tu che sei in loco, vedi se queste “vestigia” del cimitero sono ancora visibili."
+    ],
+    "choices": [
+      {
+        "0": "Le ho trovate!",
+        "next_node": "bottone_b154"
+      },
+      {
+        "1": "Cosa devo cercare?",
+        "next_node": "bottone_b153"
+      }
+    ]
+  },
+  {
+    "id": "bottone_b153",
+    "content": [
+      "text: Boh?! 🤷",
+      "text: Tombe?",
+      "text: Lapidi?",
+      "text: 🪦🪦🪦",
+      "text: Forza Capo! Scatena i tuoi sensi di ragno!",
+      "text: Non c’è niente davanti al monumento all’aviatore Rusjan? Di là dalla strada?"
+    ],
+    "choices": [
+      {
+        "0": "Le ho trovate!",
+        "next_node": "bottone_b154"
+      }
+    ]
+  },
+  {
+    "id": "bottone_b154",
+    "content": [
+      "text: Ah! Cosa? Mandami un vocale e descrivimi quello che vedi."
+    ],
+    "ai_fallback": {
+      "prompt": "L'utente ti deve mandare messaggio vocale i cui descrive quello che vede.",
+      "succes_condition": "L'utente deve inviare un messaggio vocale. Aspetta che invii il messaggio vocale prima di passare al prossimo nodo.",
+      "next_node": "invio_vocale"
+    }
+  },
+  {
+    "id": "invio_vocale",
+    "content": [
+      "text: Ecco invece quello che ho trovato io!",
+      "pdf: 35 IT metropoli necropoli.pdf",
+      "text: 🧟‍♂️",
+      "text: dimmi quando hai finito di leggere"
+    ],
+    "choices": [
+      {
+        "0": "Ho letto",
+        "next_node": "bottone_b155"
+      }
+    ]
+  },
+  {
+    "id": "bottone_b155",
+    "content": [
+      "text: L’articolo è recente, ma sembra proprio riferirsi a quelle pietre.",
+      "audio: VOCALE_31.mp3",
+      "text: 🐓"
+    ],
+    "choices": [
+      {
+        "0": "Ci provo.",
+        "next_node": "bottone_b156"
+      },
+      {
+        "1": "Non vale la pena.",
+        "next_node": "bottone_b157"
+      },
+      {
+        "2": "Tu vuoi farmi arrestare!",
+        "next_node": "bottone_b158"
+      },
+      {
+        "3": "☠️ ODIO QUESTE COSE IMBARAZZANTI ☠️",
+        "next_node": "bottone_b159"
+      }
+    ]
+  },
+  {
+    "id": "bottone_b156",
+    "content": [
+      "text: Vai!",
+      "text: Scatenati, Capo!",
+      "text: E fammi sapere…",
+      "text: Intanto…",
+      "text: Come si chiama il Feldmaresciallo del Kaiser! C’è un nome sulla tomba?",
+      "text: Magari c’entra con loro! Coi Rozental!",
+      "text: Scrivimelo."
+    ],
+    "validation": {
+      "accepted_answers": [
+        "conrad",
+        "hotzendorf",
+        "hötzendorf",
+        "feldmaresciallo"
+      ],
+      "correct_node": "risposta_corretta_2",
+      "fallback_node": "nodo_aiuto_feldmaresciallo",
+      "max_attempts": 3,
+      "error_messages": [
+        "text: Non ci siamo... pensa al monumento che hai di fronte.",
+        "text: È un nome austro-ungarico. Riprova!",
+        "text: Studia la targa del monumento più attentamente..."
+      ]
+    }
+  },
+  {
+    "id": "nodo_aiuto_feldmaresciallo",
+    "content": [
+      "text: Niente, Capo... non si siamo... ma per fortuna tu hai un'assistente coi fiocchi (che forse si meriterebbe un aumento, non credi?).",
+      "text: Ho trovato questo articolo in un database online.",
+      "pdf: 36 Prima di Nova Gorica - Pred Novo Gorico.pdf",
+      "text: Faccio qualche ricerca su questo Hertlein... ma ti costerà quantomeno una cena..."
+    ],
+    "choices": [
+      {
+        "0": "Touché...",
+        "next_node": "risposta_corretta_2"
+      }
+    ]
+  },
+  {
+    "id": "bottone_b157",
+    "content": [
+      "text: Che significa?",
+      "text: Niente… passaggi segreti? 😞",
+      "text: Intanto magari dimmi come si chiama il Feldmaresciallo del Kaiser. C’è un nome sulla tomba?",
+      "text: Magari c’entra con loro! Coi Rozental!",
+      "text: Scrivimelo."
+    ],
+    "validation": {
+      "accepted_answers": [
+        "conrad",
+        "hotzendorf",
+        "hötzendorf",
+        "feldmaresciallo"
+      ],
+      "correct_node": "risposta_corretta_2",
+      "fallback_node": "nodo_aiuto_feldmaresciallo",
+      "max_attempts": 3,
+      "error_messages": [
+        "text: Non ci siamo... pensa al monumento che hai di fronte.",
+        "text: È un nome austro-ungarico. Riprova!",
+        "text: Studia la targa del monumento più attentamente..."
+      ]
+    }
+  },
+  {
+    "id": "bottone_b158",
+    "content": [
+      "text: Arrestarti! Ma va’!",
+      "text: E poi… se non ti hanno arrestato finora, con quella faccia che hai, vuol dire che non corri rischi.",
+      "text: 🤣🤣🤣",
+      "text: Scusa Capo… mi è venuta così!",
+      "text: Intanto magari dimmi come si chiama il Feldmaresciallo del Kaiser. C’è un nome sulla tomba?",
+      "text: Magari c’entra con loro! Coi Rozental!",
+      "text: Scrivimelo."
+    ],
+    "validation": {
+      "accepted_answers": [
+        "conrad",
+        "hotzendorf",
+        "hötzendorf",
+        "feldmaresciallo"
+      ],
+      "correct_node": "risposta_corretta_2",
+      "fallback_node": "nodo_aiuto_feldmaresciallo",
+      "max_attempts": 3,
+      "error_messages": [
+        "text: Non ci siamo... pensa al monumento che hai di fronte.",
+        "text: È un nome austro-ungarico. Riprova!",
+        "text: Studia la targa del monumento più attentamente..."
+      ]
+    }
+  },
+  {
+    "id": "bottone_b159",
+    "content": [
+      "text: Va bene, va bene, va bene!",
+      "text: Fattelo dire… Una volta eri molto più punk! 🧷🎸🔥",
+      "text: Intanto magari dimmi come si chiama il Feldmaresciallo del Kaiser. C’è un nome sulla tomba?",
+      "text: Magari c’entra con loro! Coi Rozental!",
+      "text: Scrivimelo."
+    ],
+    "validation": {
+      "accepted_answers": [
+        "conrad",
+        "hotzendorf",
+        "hötzendorf",
+        "feldmaresciallo"
+      ],
+      "correct_node": "risposta_corretta_2",
+      "fallback_node": "nodo_aiuto_feldmaresciallo",
+      "max_attempts": 3,
+      "error_messages": [
+        "text: Non ci siamo... pensa al monumento che hai di fronte.",
+        "text: È un nome austro-ungarico. Riprova!",
+        "text: Studia la targa del monumento più attentamente..."
+      ]
+    }
+  },
+  {
+    "id": "risposta_corretta_2",
+    "content": [
+      "audio: VOCALE_32.mp3",
+      "pdf: 22 documento sismi IT.pdf",
+      "text: Capo!",
+      "text: HAI VISTO CHI C’È?"
+    ],
+    "choices": [
+      {
+        "0": "Chi?",
+        "next_node": "bottone_b160a"
+      },
+      {
+        "1": "Pazzesco!",
+        "next_node": "bottone_b160b"
+      }
+    ]
+  },
+  {
+    "id": "bottone_b160a",
+    "content": [
+      "text: Ma come \"chi\"?"
+    ],
+    "open": {
+      "next_node": "bottone_b161"
+    }
+  },
+  {
+    "id": "bottone_b160b",
+    "content": [
+      "text: Pazzesco sì!"
+    ],
+    "open": {
+      "next_node": "bottone_b161"
+    }
+  },
+  {
+    "id": "bottone_b161",
+    "content": [
+      "audio: VOCALE_33.mp3",
+      "text: 🪤"
+    ],
+    "effects": {
+      "rozental_done": true
+    },
+    "choices": [
+      {
+        "0": "Ci può stare.",
+        "next_node": "bottone_b162",
+        "condition": "rozental_done && !eva_done && !ruski_bloki_done"
+      },
+      {
+        "1": "Continua...",
+        "next_node": "bottone_b162",
+        "condition": "rozental_done && !eva_done && !ruski_bloki_done"
+      }
+    ]
+  },
+  {
+    "id": "bottone_b162",
+    "content": [
+      "audio: VOCALE_34.mp3",
+      "text: 🥵😤🤬😰"
+    ],
+    "effects": {
+      "rozental_done": true
+    },
+    "choices": [
+      {
+        "0": "Concentriamoci su Eva",
+        "next_node": "a)_prima_linea:_eva",
+        "condition": "rozental_done && !eva_done && !ruski_bloki_done"
+      },
+      {
+        "1": "Inizio a farmi domande sui Ruski Bloki",
+        "next_node": "bottone_bc",
+        "condition": "rozental_done && !eva_done && !ruski_bloki_done"
+      },
+      {
+        "2": "Non so che fare",
+        "next_node": "bottone_bd",
+        "condition": "rozental_done && !eva_done && !ruski_bloki_done"
+      },
+      {
+        "3": "Che tutto inizi ai Ruski Bloki?",
+        "next_node": "bottone_abc_bac",
+        "condition": "rozental_done && eva_done && !ruski_bloki_done"
+      },
+      {
+        "4": "Da chi stavi scappando, Eva?",
+        "next_node": "bottone_bca_cba",
+        "condition": "rozental_done && !eva_done && ruski_bloki_done"
+      },
+      {
+        "5": "Corri sempre troppo...",
+        "next_node": "bottone_aexit_bexit_cexit",
+        "condition": "rozental_done && eva_done && ruski_bloki_done"
+      }
+    ]
+  },
+  {
+    "id": "bottone_bc",
+    "content": [
+      "text: E non solo tu, Capo! È da quando ho preso in mano la mappa che mi chiedo cosa si nasconda lì. Perché avevano attirato l’attenzione di Branca?",
+      "text: Ci facciamo un giretto e li andiamo a vedere?"
+    ],
+    "choices": [
+      {
+        "0": "Andiamoci!",
+        "next_node": "bottone_c+"
+      }
+    ]
+  },
+  {
+    "id": "bottone_abc_bac",
+    "content": [
+      "text: Non lo so, ma di certo approfondirei la cosa. Anche Branca aveva rivolto la sua attenzione su di essi: li ha anche cerchiati sulla mappa!",
+      "text: Che dici?",
+      "text: Ti ci porto?"
+    ],
+    "choices": [
+      {
+        "0": "Vai!",
+        "next_node": "c)_terza_linea:_ruski_bloki"
+      }
+    ]
+  },
+  {
+    "id": "c)_terza_linea:_ruski_bloki",
+    "content": [
+      "text: Sono i “ruski bloki”... il vecchio quartiere residenziale di Nova Gorica, una delle poche parti effettivamente costruite della “città ideale” – così pare. Interessante.",
+      "text: Ti ci porto?"
+    ],
+    "choices": [
+      {
+        "0": "No, stiamo su Eva",
+        "next_node": "a)_prima_linea:_eva"
+      },
+      {
+        "1": "No, meglio indagare sui Rozental",
+        "next_node": "bottone_b"
+      },
+      {
+        "2": "Vai!",
+        "next_node": "bottone_c+"
+      }
+    ]
+  },
+  {
+    "id": "bottone_c+",
+    "content": [
+      "text: Ruski bloki!",
+      "text: Ecco le coordinate!",
+      "map: 45.95321821243998, 13.646104999824358",
+      "audio: VOCALE_17_01.mp3",
+      "audio: VOCALE_17_02.mp3",
+      "audio: VOCALE_17_03.mp3",
+      "audio: VOCALE_17_04.mp3",
+      "text: Fammi sapere quando ci sei!"
+    ],
+    "choices": [
+      {
+        "0": "Sono alla posizione",
+        "next_node": "bottone_c114"
+      }
+    ]
+  },
+  {
+    "id": "bottone_c114",
+    "content": [
+      "text: Mi affido ai tuoi occhi!",
+      "text: Cerca di capire cosa stesse cercando Branca.",
+      "text: Mandami un messaggio vocale e raccontami: cosa vedi?"
+    ],
+    "ai_fallback": {
+      "prompt": "L'utente ti deve mandare messaggio vocale i cui descrive quello che vede.",
+      "succes_condition": "L'utente deve inviare un messaggio vocale. Aspetta che invii il messaggio vocale prima di passare al prossimo nodo.",
+      "next_node": "invio_vocale_2"
+    }
+  },
+  {
+    "id": "invio_vocale_2",
+    "content": [
+      "text: Mhm...",
+      "text: Quello che dici mi ha acceso una scintilla... aspetta, ti mando una foto.",
+      "image: shared/11 simon e eva.jpg",
+      "text: Questa foto era nel pacco, tra i documenti di Eva recuperatI e speditI in Italia dal detective Branca. ",
+      "text: Pensi che possa essere stata scattata nei paraggi?"
+    ],
+    "choices": [
+      {
+        "0": "Senz'altro!",
+        "next_node": "bottone_c115"
+      },
+      {
+        "1": "Non saprei...",
+        "next_node": "bottone_c116"
+      }
+    ]
+  },
+  {
+    "id": "bottone_c115",
+    "content": [
+      "text: Dai, mandami una foto di quello scorcio per com'è oggi! 📸"
+    ],
+    "ai_fallback": {
+      "prompt": "L'utente ti deve mandare una foto.",
+      "succes_condition": "L'utente deve inviare una foto. Aspetta che invii la foto prima di continuare al prossimo nodo.",
+      "next_node": "invio_foto_2"
+    }
+  },
+  {
+    "id": "invio_foto_2",
+    "content": [
+      "text: Grazie, capo! La metto in archivio",
+      "text: Comunque quella è Eva, senza dubbio!",
+      "text: Ecco cosa cercava Branca: è andato a cercare il posto dove Eva è cresciuta.",
+      "text: Guarda cos’altro ho trovato nel pacco!",
+      "image: shared/12 eva e fabijan.jpg",
+      "text: Forse anche questa è stata scattata nei paraggi.",
+      "text: La vedi?"
+    ],
+    "choices": [
+      {
+        "0": "Potrebbe essere.",
+        "next_node": "bottone_c117"
+      },
+      {
+        "1": "Non si direbbe.",
+        "next_node": "bottone_c118"
+      }
+    ]
+  },
+  {
+    "id": "bottone_c116",
+    "content": [
+      "text: Mh...",
+      "text: Ma se fosse così, e se quella della foto fosse proprio Eva (e lo sguardo sembra proprio quello di Eva da grande) è possibile che Branca stesse cercando il posto in cui Eva era cresciuta.",
+      "text: Bingo! Guarda! C’è un’altra foto simile nel pacco!",
+      "image: shared/12 eva e fabijan.jpg",
+      "text: Forse anche questa foto è stata scattata lì.",
+      "text: Possibile?"
+    ],
+    "choices": [
+      {
+        "0": "Sì.",
+        "next_node": "bottone_c117"
+      },
+      {
+        "1": "No...",
+        "next_node": "bottone_c118"
+      }
+    ]
+  },
+  {
+    "id": "bottone_c117",
+    "content": [
+      "text: Top! Cerca un posto dove sederti!"
+    ],
+    "choices": [
+      {
+        "0": "Ragioniamo!",
+        "next_node": "bottone_c119"
+      }
+    ]
+  },
+  {
+    "id": "bottone_c118",
+    "content": [
+      "text: Magari è stata tolta. Ne è passato di tempo…",
+      "text: Forse sessant’anni, dal giorno in cui è stata scattata quella foto…",
+      "text: Trova una panchina e siediti un momento.",
+      "text: Proviamo a ragionare!"
+    ],
+    "choices": [
+      {
+        "0": "Ragioniamo!",
+        "next_node": "bottone_c119"
+      }
+    ]
+  },
+  {
+    "id": "bottone_c119",
+    "content": [
+      "audio: VOCALE_18.mp3",
+      "image: 13 screenshot novak IT.jpg",
+      "text: Che dici?"
+    ],
+    "choices": [
+      {
+        "0": "È lui, me lo sento!",
+        "next_node": "bottone_c120a"
+      },
+      {
+        "1": "Mh... Ruski Bloki!",
+        "next_node": "bottone_c120b"
+      },
+      {
+        "2": "Sì. L'età è compatibile.",
+        "next_node": "bottone_c120b"
+      },
+      {
+        "3": "C'è altro su di lui?",
+        "next_node": "bottone_c120c"
+      }
+    ]
+  },
+  {
+    "id": "bottone_c120a",
+    "content": [
+      "text: Concordo, Capo!"
+    ],
+    "open": {
+      "next_node": "bottone_c120"
+    }
+  },
+  {
+    "id": "bottone_c120b",
+    "content": [
+      "text: Già!"
+    ],
+    "open": {
+      "next_node": "bottone_c120"
+    }
+  },
+  {
+    "id": "bottone_c120c",
+    "content": [
+      "text: Vediamo...",
+      "text: Ho un po’ guardato in giro: c’è qualche sua ricerca... pubblicazioni... convegni... niente che attiri la mia attenzione..."
+    ],
+    "open": {
+      "next_node": "bottone_c120"
+    }
+  },
+  {
+    "id": "bottone_c120",
+    "content": [
+      "text: Sembra essere arrivato a Berlino molto giovane. Sicuramente nel 1990 non abitava più a Nova Gorica.",
+      "text: ... Che facciamo?"
+    ],
+    "choices": [
+      {
+        "0": "Non c'è niente nel pacco?",
+        "next_node": "bottone_c121"
+      }
+    ]
+  },
+  {
+    "id": "bottone_c121",
+    "content": [
+      "audio: VOCALE_19_01.mp3",
+      "audio: VOCALE_19_02.mp3",
+      "text: Capo... UN T-E-S-O-R-O!!!!!!",
+      "text: Inizio ad agitarmi! E se Eva avesse scoperto qualcosa? Se fosse venuta a Nova Gorica a cercare il tesoro di Ravnikar?",
+      "text: Indiana Jones e l’ultima crociata, te lo ricordi? Nel 1990 era appena uscito al cinema!!!",
+      "text: Ok è ufficiale...",
+      "text: P A N I C O !"
+    ],
+    "effects": {
+      "ruski_bloki_done": true
+    },
+    "choices": [
+      {
+        "0": "Eva, cosa stavi combinando?",
+        "next_node": "bottone_ca",
+        "condition": "ruski_bloki_done && !rozental_done && !eva_done"
+      },
+      {
+        "1": "Ancora questi Rozental... ne sai di più?",
+        "next_node": "b)_seconda_linea:_rozental",
+        "condition": "ruski_bloki_done && !rozental_done && !eva_done"
+      },
+      {
+        "2": "I Rozental iniziano a puzzare di marcio",
+        "next_node": "bottone_cab_acb",
+        "condition": "ruski_bloki_done && !rozental_done && eva_done"
+      },
+      {
+        "3": "Da chi stavi scappado, Eva?",
+        "next_node": "bottone_bca_cba",
+        "condition": "ruski_bloki_done && rozental_done && !eva_done"
+      },
+      {
+        "4": "Calmati!",
+        "next_node": "bottone_aexit_bexit_cexit",
+        "condition": "ruski_bloki_done && rozental_done && eva_done"
+      }
+    ]
+  },
+  {
+    "id": "bottone_ca",
+    "content": [
+      "audio: VOCALE_20.mp3",
+      "text: 🕵️‍♂️"
+    ],
+    "choices": [
+      {
+        "0": "Ci sto!",
+        "next_node": "a)_prima_linea:_eva"
+      }
+    ]
+  },
+  {
+    "id": "bottone_d",
+    "content": [
+      "text: Decido io?",
+      "text: Ok, sai cosa? Qui ci sono i dadi di Branca. Tiro un dado vediamo cosa esce?",
+      "text: Dai, che visto che si parla di casinò... entriamo nel mood giusto! 🃏",
+      "text: Se esce uno o due, si va all’area cerchiata.",
+      "text: Se esce tre o quattro, ci dedichiamo a Eva.",
+      "text: Se esce cinque o sei, ci occupiamo dei Rozental.",
+      "text: Perfetto, no? Ammesso che non sia un dado truccato… 😆",
+      "text: 🎲 Vado? 🎲"
+    ],
+    "choices": [
+      {
+        "0": "Vai!",
+        "next_node": "bottone_d164"
+      }
+    ]
+  },
+  {
+    "id": "dado_1_ruski_bloki",
+    "content": [
+      "text: Uno!",
+      "image: shared/24 dado 1.jpg"
+    ],
+    "choices": [
+      {
+        "0": "Ruski Bloki!",
+        "next_node": "c)_terza_linea:_ruski_bloki"
+      }
+    ]
+  },
+  {
+    "id": "dado_2_ruski_bloki",
+    "content": [
+      "text: Due!",
+      "image: shared/25 dado 2.jpg"
+    ],
+    "choices": [
+      {
+        "0": "Ruski Bloki!",
+        "next_node": "c)_terza_linea:_ruski_bloki"
+      }
+    ]
+  },
+  {
+    "id": "dado_3_ruski_bloki",
+    "content": [
+      "text: Tre!",
+      "image: shared/26 dado 3.jpg"
+    ],
+    "choices": [
+      {
+        "0": "Ruski Bloki!",
+        "next_node": "c)_terza_linea:_ruski_bloki"
+      }
+    ]
+  },
+  {
+    "id": "dado_1_rozental",
+    "content": [
+      "text: Uno!",
+      "image: shared/24 dado 1.jpg"
+    ],
+    "choices": [
+      {
+        "0": "Rozental!",
+        "next_node": "b)_seconda_linea:_rozental"
+      }
+    ]
+  },
+  {
+    "id": "dado_2_rozental",
+    "content": [
+      "text: Due!",
+      "image: shared/25 dado 2.jpg"
+    ],
+    "choices": [
+      {
+        "0": "Rozental!",
+        "next_node": "b)_seconda_linea:_rozental"
+      }
+    ]
+  },
+  {
+    "id": "dado_3_rozental",
+    "content": [
+      "text: Tre!",
+      "image: shared/26 dado 3.jpg"
+    ],
+    "choices": [
+      {
+        "0": "Rozental!",
+        "next_node": "b)_seconda_linea:_rozental"
+      }
+    ]
+  },
+  {
+    "id": "dado_4_rozental",
+    "content": [
+      "text: Quattro!",
+      "image: shared/27 dado 4.jpg"
+    ],
+    "choices": [
+      {
+        "0": "Rozental!",
+        "next_node": "b)_seconda_linea:_rozental"
+      }
+    ]
+  },
+  {
+    "id": "dado_5_rozental",
+    "content": [
+      "text: Cinque!",
+      "image: shared/28 dado 5.jpg"
+    ],
+    "choices": [
+      {
+        "0": "Rozental!",
+        "next_node": "b)_seconda_linea:_rozental"
+      }
+    ]
+  },
+  {
+    "id": "dado_6_rozental",
+    "content": [
+      "text: Sei!",
+      "image: shared/29 dado 6.jpg"
+    ],
+    "choices": [
+      {
+        "0": "Rozental!",
+        "next_node": "b)_seconda_linea:_rozental"
+      }
+    ]
+  },
+  {
+    "id": "dado_3_eva",
+    "content": [
+      "text: Tre!",
+      "image: shared/26 dado 3.jpg"
+    ],
+    "choices": [
+      {
+        "0": "Eva!",
+        "next_node": "a)_prima_linea:_eva"
+      }
+    ]
+  },
+  {
+    "id": "dado_4_eva",
+    "content": [
+      "text: Quattro!",
+      "image: shared/27 dado 4.jpg"
+    ],
+    "choices": [
+      {
+        "0": "Eva!",
+        "next_node": "a)_prima_linea:_eva"
+      }
+    ]
+  },
+  {
+    "id": "dado_5_eva",
+    "content": [
+      "text: Cinque!",
+      "image: shared/28 dado 5.jpg"
+    ],
+    "choices": [
+      {
+        "0": "Eva!",
+        "next_node": "a)_prima_linea:_eva"
+      }
+    ]
+  },
+  {
+    "id": "dado_6_eva",
+    "content": [
+      "text: Sei!",
+      "image: shared/29 dado 6.jpg"
+    ],
+    "choices": [
+      {
+        "0": "Eva!",
+        "next_node": "a)_prima_linea:_eva"
+      }
+    ]
+  },
+  {
+    "id": "bottone_ad",
+    "content": [
+      "text: Decido io?",
+      "text: Ok, sai cosa? Qui ci sono i dadi di Branca. Tiro un dado vediamo cosa esce?",
+      "text: Dai, che visto che si parla di casinò… entriamo nel mood giusto! 🃏",
+      "text: Se esce uno, due o tre si va all’area cerchiata.",
+      "text: Se esce quattro, cinque o sei, ci occupiamo dei Rozental.",
+      "text: Perfetto, no? Ammesso che non sia un dado truccato… 😆",
+      "text: 🎲 Vado? 🎲"
+    ],
+    "choices": [
+      {
+        "0": "Vai!",
+        "next_node": "bottone_ad164"
+      }
+    ]
+  },
+  {
+    "id": "bottone_ad164",
+    "content": [],
+    "random_outcome": [
+      "dado_1_ruski_bloki",
+      "dado_2_ruski_bloki",
+      "dado_3_ruski_bloki",
+      "dado_4_rozental",
+      "dado_5_rozental",
+      "dado_6_rozental"
+    ],
+    "randomOutcome": [
+      "dado_1_ruski_bloki",
+      "dado_2_ruski_bloki",
+      "dado_3_ruski_bloki",
+      "dado_4_rozental",
+      "dado_5_rozental",
+      "dado_6_rozental"
+    ]
+  },
+  {
+    "id": "bottone_bd",
+    "content": [
+      "text: Decido io?",
+      "text: Ok, sai cosa? Qui ci sono i dadi di Branca. Tiro un dado vediamo cosa esce?",
+      "text: Dai, che visto che si parla di casinò… entriamo nel mood giusto! 🃏",
+      "text: Se esce uno, due o tre si va all’area cerchiata.",
+      "text: Se esce quattro, cinque o sei, proviamo a seguire Eva.",
+      "text: Perfetto, no? Ammesso che non sia un dado truccato… 😆",
+      "text: 🎲 Vado? 🎲"
+    ],
+    "choices": [
+      {
+        "0": "Vai!",
+        "next_node": "bottone_bd164"
+      }
+    ]
+  },
+  {
+    "id": "bottone_bd164",
+    "content": [],
+    "random_outcome": [
+      "dado_1_ruski_bloki",
+      "dado_2_ruski_bloki",
+      "dado_3_ruski_bloki",
+      "dado_4_eva",
+      "dado_5_eva",
+      "dado_6_eva"
+    ],
+    "randomOutcome": [
+      "dado_1_ruski_bloki",
+      "dado_2_ruski_bloki",
+      "dado_3_ruski_bloki",
+      "dado_4_eva",
+      "dado_5_eva",
+      "dado_6_eva"
+    ]
+  },
+  {
+    "id": "bottone_cd",
+    "content": [
+      "text: Decido io?",
+      "text: Ok, sai cosa? Qui ci sono i dadi di Branca. Tiro un dado vediamo cosa esce?",
+      "text: Dai, che visto che si parla di casinò… entriamo nel mood giusto! 🃏",
+      "text: Se esce uno, due o tre indaghiamo sui Rozental.",
+      "text: Se esce quattro, cinque o sei, proviamo a seguire Eva.",
+      "text: Perfetto, no? Ammesso che non sia un dado truccato… 😆",
+      "text: 🎲 Vado? 🎲"
+    ],
+    "choices": [
+      {
+        "0": "Vai!",
+        "next_node": "bottone_cd164"
+      }
+    ]
+  },
+  {
+    "id": "bottone_cd164",
+    "content": [],
+    "random_outcome": [
+      "dado_1_rozental",
+      "dado_2_rozental",
+      "dado_3_rozental",
+      "dado_4_eva",
+      "dado_5_eva",
+      "dado_6_eva"
+    ],
+    "randomOutcome": [
+      "dado_1_rozental",
+      "dado_2_rozental",
+      "dado_3_rozental",
+      "dado_4_eva",
+      "dado_5_eva",
+      "dado_6_eva"
+    ]
+  },
+  {
+    "id": "bottone_d164",
+    "content": [],
+    "random_outcome": [
+      "dado_1_ruski_bloki",
+      "dado_2_ruski_bloki",
+      "dado_3_eva",
+      "dado_4_eva",
+      "dado_5_rozental",
+      "dado_6_rozental"
+    ],
+    "randomOutcome": [
+      "dado_1_ruski_bloki",
+      "dado_2_ruski_bloki",
+      "dado_3_rozental",
+      "dado_4_rozental",
+      "dado_5_eva",
+      "dado_6_eva"
+    ]
+  },
+  {
+    "id": "bottone_aexit_bexit_cexit",
+    "content": [
+      "text: Hai ragione, Capo! Ma che invidia non poter essere lì con te!!!!",
+      "text: 😤😤😤",
+      "text: Sai cosa ci vuole a questo punto?"
+    ],
+    "choices": [
+      {
+        "0": "Un'illuminazione?",
+        "next_node": "bottone_170"
+      },
+      {
+        "1": "Un caffè?",
+        "next_node": "bottone_170"
+      },
+      {
+        "2": "Un gelato?",
+        "next_node": "bottone_170"
+      },
+      {
+        "3": "...una vacanza?",
+        "next_node": "bottone_170"
+      }
+    ],
+    "requiresAllSteps": true
+  },
+  {
+    "id": "bottone_170",
+    "content": [
+      "text: Hehe... ben detto, Capo!",
+      "text: 😁",
+      "text: In effetti, anche io ho bisogno di riordinare le idee.",
+      "text: Anzi: questo caso si sta rivelando lungo e articolato. Se vuoi sospendere l'indagine e magari ritornarci più tardi, a mente lucida (o anche domani...) io sono sempre qui.",
+      "text: Io intanto riprendo tutti gli appunti e metto insieme i pezzi. 🕵️"
+    ],
+    "choices": [
+      {
+        "0": "Mi basta una pausa veloce?",
+        "next_node": "bottone_173a"
+      },
+      {
+        "1": "Meglio continuare un altro giorno.",
+        "next_node": "bottone_173b"
+      }
+    ]
+  },
+  {
+    "id": "bottone_173a",
+    "content": [
+      "text: Perfetto, Capo.",
+      "text: Ti faccio una proposta: andiamo in piazza. Mah sì. Lì ci sono panchine, caffè, gelaterie... Ti siedi dove vuoi, ti prendi quello che vuoi, e poi ci schiariamo le idee. Insieme.",
+      "text: Sei pur sempre in vacanza!",
+      "text: Ti mando la mappa.",
+      "map: 45.95744174114331, 13.64724423025279",
+      "text: Anzi, farò di più: ti mando anche un bel brano motivazionale per ridarti la carica!",
+      "audio: move_those_little_legs.mp3",
+      "text: 🎸",
+      "text: Quando ci sei batti un colpo!"
+    ],
+    "choices": [
+      {
+        "0": "Ci sono!",
+        "next_node": "bottone_174"
+      }
+    ]
+  },
+  {
+    "id": "bottone_173b",
+    "content": [
+      "text: Prenditi tutto il tempo che vuoi: io sono sempre a tua disposizione, Capo...",
+      "text: Anche a notte fonda!  🐺🌙🦉",
+      "text: Questo caso mi intriga un sacco, ma dobbiamo essere al pieno delle forze per arrivare a una soluzione!",
+      "text: Quando ci sei, basta che mi fai sapere: ripartiremo da piazza France Bevk."
+    ],
+    "choices": [
+      {
+        "0": "Ci sono. Ricominciamo?",
+        "next_node": "bottone_173c"
+      }
+    ]
+  },
+  {
+    "id": "bottone_173c",
+    "content": [
+      "text: Evvvaaaaaaiiiiiii! 🚀🚀🚀",
+      "text: Non so perché, ma me lo sentivo che avresti scritto: sono già in postazione!",
+      "text: Tu sei in piazza?"
+    ],
+    "choices": [
+      {
+        "0": "Certo!",
+        "next_node": "bottone_174"
+      },
+      {
+        "1": "No... qual era?",
+        "next_node": "bottone_113e"
+      }
+    ]
+  },
+  {
+    "id": "bottone_113e",
+    "content": [
+      "map: 45.95744174114331, 13.64724423025279",
+      "text: Questa è la posizione! Ci vediamo lì. Intanto… ascoltati questa: è un brano motivazionale, così riscaldi i motori! Dai, dai, dai, Capo!",
+      "audio: move_those_little_legs.mp3",
+      "text: 🎸",
+      "text: Quando ci sei batti un colpo!"
+    ],
+    "choices": [
+      {
+        "0": "Ci sono!",
+        "next_node": "bottone_174"
+      }
+    ]
+  },
+  {
+    "id": "bottone_174",
+    "content": [
+      "text: Perfetto!",
+      "text: Certo che stavolta l’indagine è proprio in salita.",
+      "text: E poi nel frattempo ho pensato... Immagina la povera Eva! Tornare a casa, là, sola, in un Paese sull’orlo del baratro... e morire così.",
+      "text: 😢",
+      "text: Mi sento un po’ in pena..."
+    ],
+    "choices": [
+      {
+        "0": "Per forza!",
+        "next_node": "bottone_176"
+      },
+      {
+        "1": "Facciamo i professionali...",
+        "next_node": "bottone_177"
+      }
+    ]
+  },
+  {
+    "id": "bottone_177",
+    "content": [
+      "text: Hai la carta vetrata al posto del cuore, Capo! 😡",
+      "text: Comunque: ci siamo concentrati molto sulla cronaca, su Branca, sull’omicidio, sul caso. Ma questa in realtà è la storia di Eva. Di una ragazza – e di una generazione – che assiste alla dissoluzione del proprio paese. Di un’ideologia. Di un mondo. Come deve essere?",
+      "text: Se intorno a te tutto crollasse... c’è qualcosa – un libro, una poesia, un album musicale, film... – qualcosa del passato... che porteresti sempre con te? C’è qualcosa che ti ricorderà per sempre il mondo da cui vieni?"
+    ],
+    "choices": [
+      {
+        "0": "Perchè me lo chiedi?",
+        "next_node": "bottone_178"
+      }
+    ]
+  },
+  {
+    "id": "bottone_176",
+    "content": [
+      "text: ❤️‍🩹",
+      "text: Comunque: ci siamo concentrati molto sulla cronaca, su Branca, sull’omicidio, sul caso. Ma questa in realtà è la storia di Eva. Di una ragazza – e di una generazione – che assiste alla dissoluzione del proprio paese. Di un’ideologia. Di un mondo. Come deve essere?",
+      "text: Se intorno a te tutto crollasse... c’è qualcosa – un libro, una poesia, un album musicale, film... – qualcosa del passato... che porteresti sempre con te? C’è qualcosa che ti ricorderà per sempre il mondo da cui vieni?"
+    ],
+    "choices": [
+      {
+        "0": "Perchè me lo chiedi?",
+        "next_node": "bottone_178"
+      }
+    ]
+  },
+  {
+    "id": "bottone_178",
+    "content": [
+      "text: Perché forse, per risolvere il caso, dobbiamo metterci nei panni di Eva.",
+      "text: Capire cosa l’ha spinta a tornare qui e a impadronirsi di quei documenti. Provaci, dai: se il tuo mondo all’improvviso crollasse, cos’è che salveresti e porteresti con te?"
+    ],
+    "ai_fallback": {
+      "prompt": "L'utente deve rispondere alla domanda: se il tuo mondo all’improvviso crollasse, cos’è che salveresti e porteresti con te?",
+      "next_node": "risposta_libera_3"
+    }
+  },
+  {
+    "id": "risposta_libera_3",
+    "content": [
+      "text: 💜",
+      "text: Io porterei con me i miei dischi... quelli che ascolto tutti i giorni con te, mentre risolviamo i nostri casi. Ne abbiamo risolti davvero tanti, Capo... a volte ci penso...",
+      "text: Dovremmo fare una bacheca, qua, nell’ufficio nuovo! Che dici?",
+      "text: Sarebbe pazzesco!!! Tipo un museo!!!",
+      "text: 😭",
+      "text: Dai, basta con le spremute di cuore, che sennò mi commuovo. Abbiamo una missione! E credo che siamo entrati nello spirito giusto.",
+      "text: Ripartiamo, Capo?"
+    ],
+    "choices": [
+      {
+        "0": "Risolviamo il caso!",
+        "next_node": "bottone_180_1"
+      },
+      {
+        "1": "Non chiamarmi \"Capo\".",
+        "next_node": "bottone_180_2"
+      }
+    ]
+  },
+  {
+    "id": "bottone_180_1",
+    "content": [
+      "text: ⚔️💚⚔️"
+    ],
+    "open": {
+      "next_node": "bottone_181"
+    }
+  },
+  {
+    "id": "bottone_180_2",
+    "content": [
+      "text: 💘"
+    ],
+    "open": {
+      "next_node": "bottone_181"
+    }
+  },
+  {
+    "id": "bottone_181",
+    "content": [
+      "text: Facciamo il punto, capo, che dici?",
+      "text: Vado con un bel vocalone!",
+      "audio: VOCALE_35_01.mp3",
+      "audio: VOCALE_35_02.mp3",
+      "audio: VOCALE_35_03.mp3",
+      "text: Vedi di condividere qualche idea, Capo... perché io... a me ne è rimasta solo una molto stupida."
+    ],
+    "choices": [
+      {
+        "0": "Che sarebbe?",
+        "next_node": "bottone_182"
+      }
+    ]
+  },
+  {
+    "id": "bottone_182",
+    "content": [
+      "text: Heh... non ci ho pensato prima. Ma adesso che la vedo...",
+      "text: Qua c’è il vecchio telefono della Branca Detective. E nella segreteria telefonica...",
+      "text: Mi sa che c’è un nastro."
+    ],
+    "choices": [
+      {
+        "0": "Un altro nastro!",
+        "next_node": "bottone_195"
+      },
+      {
+        "1": "Lo... ascoltiamo?",
+        "next_node": "bottone_195"
+      },
+      {
+        "2": "E lo dici ora?",
+        "next_node": "bottone_195"
+      },
+      {
+        "3": "😐",
+        "next_node": "bottone_195"
+      }
+    ]
+  },
+  {
+    "id": "bottone_195",
+    "content": [
+      "text: Ma sì, non faceva parte dei documenti dell’indagine! Cosa devo pensare? Con tutto il ciarpame che c’era qua! Pensa che stavo per buttare tutto.",
+      "text: Dai: lo metto su.",
+      "audio: VOCALE_36_01.mp3",
+      "audio: VOCALE_36_02.mp3",
+      "text: Cosa vorrà dire capo?"
+    ],
+    "choices": [
+      {
+        "0": "Che il messaggio si legge solo di notte?",
+        "next_node": "bottone_199"
+      },
+      {
+        "1": "Che il messaggio si legge solo dall'alto?",
+        "next_node": "bottone_200"
+      },
+      {
+        "2": "Che il messaggio è in una lingua aliena?",
+        "next_node": "bottone_201"
+      },
+      {
+        "3": "Secondo me è un matto...",
+        "next_node": "bottone_202"
+      }
+    ]
+  },
+  {
+    "id": "bottone_199",
+    "content": [
+      "text: Potrebbe essere! Cosa facciamo? Ti metti lì su una panchina e aspetti! Magari stanotte compare qualcosa... da qualche parte... boh!"
+    ],
+    "choices": [
+      {
+        "0": "Io sarei in vacanza...",
+        "next_node": "bottone_203"
+      }
+    ]
+  },
+  {
+    "id": "bottone_200",
+    "content": [
+      "text: Potrebbe essere ma come possiamo fare a leggere...",
+      "text: Dall’alto...",
+      "text: Aspetta fammi vedere se in zona c’è una piattaforma, una torre, un campanile... qualcosa di utile su cui salire...",
+      "text: Aspetta...",
+      "text: Aspetta!!!",
+      "text: Mando vocale!",
+      "audio: VOCALE_37.mp3",
+      "text: 📍 Ci vediamo qua! 📍",
+      "map: 45.95722248881008, 13.647984590649967"
+    ],
+    "choices": [
+      {
+        "0": "Sono al plastico",
+        "next_node": "bottone_204"
+      }
+    ]
+  },
+  {
+    "id": "bottone_201",
+    "content": [
+      "text: Potrebbe essere! Certo! Forse la città di Nova Gorica è la città scelta dagli extraterrestri per iniziare a colonizzare la Terra e parleranno una lingua particolare che Ravnikar conosceva! Capo! Sei un genio! Prova ad avvicinare qualcuno! Prova a gesticolare, emetti qualche suono strano, qualcosa di gutturale! Fai capire alla gente che sai chi sono!"
+    ],
+    "choices": [
+      {
+        "0": "Non ci penso nemmeno!",
+        "next_node": "bottone_203"
+      }
+    ]
+  },
+  {
+    "id": "bottone_202",
+    "content": [
+      "text: Vabbè, allora lasciamo perdere! Dimentichiamoci di tutta sta faccenda e torniamo ai soliti lavoretti della noia!"
+    ],
+    "choices": [
+      {
+        "0": "Te lo scordi!",
+        "next_node": "bottone_203"
+      }
+    ]
+  },
+  {
+    "id": "bottone_203",
+    "content": [
+      "text: 😬",
+      "text: Altre idee?"
+    ],
+    "choices": [
+      {
+        "0": "Che il messaggio si legge solo di notte?",
+        "next_node": "bottone_199"
+      },
+      {
+        "1": "Che il messaggio si legge solo dall'alto?",
+        "next_node": "bottone_200"
+      },
+      {
+        "2": "Che il messaggio è in una lingua aliena?",
+        "next_node": "bottone_201"
+      },
+      {
+        "3": "Secondo me è un matto...",
+        "next_node": "bottone_202"
+      }
+    ]
+  },
+  {
+    "id": "bottone_204",
+    "content": [
+      "audio: VOCALE_38.mp3",
+      "text: 👎"
+    ],
+    "choices": [
+      {
+        "0": "Capita.",
+        "next_node": "bottone_205"
+      },
+      {
+        "1": "Principiante...",
+        "next_node": "bottone_206"
+      },
+      {
+        "2": "Noi detective siamo così...",
+        "next_node": "bottone_207"
+      }
+    ]
+  },
+  {
+    "id": "bottone_205",
+    "content": [
+      "text: 💛",
+      "text: Eccoti la mappa completa!",
+      "image: shared/30 mappa completa.jpg"
+    ],
+    "choices": [
+      {
+        "0": "Mappa analizzata!",
+        "next_node": "bottone_208"
+      }
+    ]
+  },
+  {
+    "id": "bottone_206",
+    "content": [
+      "text: Non come te, Capo!",
+      "text: Eccoti la mappa completa!",
+      "image: shared/30 mappa completa.jpg"
+    ],
+    "choices": [
+      {
+        "0": "Mappa analizzata!",
+        "next_node": "bottone_208"
+      }
+    ]
+  },
+  {
+    "id": "bottone_207",
+    "content": [
+      "text: Fuori croccantissimi e dentro morbidissimi?  🍫🍫🍫",
+      "text: Eccoti la mappa completa!",
+      "image: shared/30 mappa completa.jpg"
+    ],
+    "choices": [
+      {
+        "0": "Mappa analizzata!",
+        "next_node": "bottone_208"
+      }
+    ]
+  },
+  {
+    "id": "bottone_208",
+    "content": [
+      "text: Bene.",
+      "text: Ho avuto un’idea.",
+      "text: Mandami una foto del plastico. Cerca di scattarla dall’alto in modo che tutto sia visibile. Sali su un muretto o qualcosa così..."
+    ],
+    "ai_fallback": {
+      "prompt": "L'utente ti deve mandare una foto.",
+      "succes_condition": "L'utente deve inviare una foto. Aspetta che invii la foto prima di continuare al prossimo nodo.",
+      "next_node": "invio_di_una_foto_3"
+    }
+  },
+  {
+    "id": "invio_di_una_foto_3",
+    "content": [
+      "text: Grazie, capo! La metto in archivio",
+      "text: Adesso la faccio processare a un OCR."
+    ],
+    "choices": [
+      {
+        "0": "Ottima idea.",
+        "next_node": "bottone_230"
+      },
+      {
+        "1": "Un... cosa?",
+        "next_node": "bottone_231"
+      }
+    ]
+  },
+  {
+    "id": "bottone_230",
+    "content": [
+      "text: Procedo!",
+      "text: Fatto."
+    ],
+    "choices": [
+      {
+        "0": "Di già?",
+        "next_node": "bottone_232a"
+      }
+    ]
+  },
+  {
+    "id": "bottone_231",
+    "content": [
+      "text: Optical character recognition! Un algoritmo che riconosce caratteri di un alfabeto…",
+      "text: Fatto."
+    ],
+    "choices": [
+      {
+        "0": "Di già?",
+        "next_node": "bottone_232a"
+      }
+    ]
+  },
+  {
+    "id": "bottone_232a",
+    "content": [
+      "text: 🌩️ Sono un fulmine, Capo! 🌩️",
+      "text: L’OCR ha distinto questi caratteri.",
+      "text: Sembrano due parole, una di cinque, l’altra di tre lettere.",
+      "image: 31 caratteri isolati IT.jpg",
+      "text: Ora sta a te, capo. Qual è la prima parola?"
+    ],
+    "validation": {
+      "accepted_answers": [
+        "peace",
+        "pace",
+        "mir"
+      ],
+      "correct_node": "bottone_233",
+      "fallback_node": "nodo_aiuto_peace",
+      "max_attempts": 3,
+      "error_messages": [
+        "text: Hmm... non è quella. Guarda meglio la scritta.",
+        "text: È una parola in inglese o sloveno... riprova.",
+        "text: Pensa a cosa c'era scritto sull'incisione."
+      ]
+    }
+  },
+  {
+    "id": "nodo_aiuto_peace",
+    "content": [
+      "text: Mah... continuo a non capire... mi sembra tutto assurdo...",
+      "text: Niente, Capo... forse meglio lascar perdere.",
+      "text: Se è questa la soluzione all'enigma, ho come la sensazione che siamo fuori strada: mi sa che ci siamo fatti suggestionare da questa idea folle che a Nova Gorica possa esserci un tesoro nascosto...",
+      "text: Lasciamo perdere.",
+      "text: Peccato però... avevo appena trovato una cosa che mi faceva sperare in un finale con il botto."
+    ],
+    "choices": [
+      {
+        "0": "Cosa?",
+        "next_node": "bottone_233"
+      }
+    ]
+  },
+  {
+    "id": "bottone_232b",
+    "content": [
+      "text: “Peace”… Pace in inglese?",
+      "text: E la seconda parola?"
+    ],
+    "validation": {
+      "accepted_answers": [
+        "mir",
+        "peace",
+        "pace"
+      ],
+      "correct_node": "bottone_233",
+      "fallback_node": "nodo_aiuto_mir",
+      "max_attempts": 3,
+      "error_messages": [
+        "text: Non è quella. Pensa alla traduzione in sloveno.",
+        "text: È la parola per 'pace' in un'altra lingua.",
+        "text: Guarda di nuovo la scritta sull'incisione."
+      ]
+    }
+  },
+  {
+    "id": "nodo_aiuto_mir",
+    "content": [
+      "text: Mah... continuo a non capire... mi sembra tutto assurdo... cosa c'entrano queste due parole tra loro? Non riesco a intravedere una chiave di lettura.",
+      "text: Se è questa la soluzione all'enigma, ho come la sensazione che siamo fuori strada. Forse meglio lascar perdere.",
+      "text: Scusa, ti ho trascinato in questa avventura, ma adesso sono stanca e ho paura che ci siamo fatti suggestionare da questa idea folle che a Nova Gorica potesse esserci un tesoro nascosto...",
+      "text: Lasciamo perdere.",
+      "text: Peccato però... avevo appena trovato una cosa che mi faceva sperare in un finale con il botto."
+    ],
+    "choices": [
+      {
+        "0": "Cosa?",
+        "next_node": "bottone_233"
+      }
+    ]
+  },
+  {
+    "id": "bottone_233",
+    "content": [
+      "image: 32 blog novak IT.jpg"
+    ],
+    "choices": [
+      {
+        "0": "Letto!",
+        "next_node": "bottone_209"
+      },
+      {
+        "1": "Che storia...",
+        "next_node": "bottone_209"
+      },
+      {
+        "2": "Tutto torna!",
+        "next_node": "bottone_209"
+      }
+    ]
+  },
+  {
+    "id": "bottone_209",
+    "content": [
+      "text: E così il nostro Ernesto Branca pare l’abbia sfangata.",
+      "text: Avrà dovuto cambiare identità per proteggersi.",
+      "text: Certamente è riuscito a espatriare: “esilio fortunato”... Hehehehe...",
+      "text: Me lo immagino da qualche parte in Sud America... a gestire un baretto su una spiaggia tropicale!"
+    ],
+    "choices": [
+      {
+        "0": "Ci sta.",
+        "next_node": "bottone_214"
+      },
+      {
+        "1": "O un'agenzia di investigazioni.",
+        "next_node": "bottone_214"
+      },
+      {
+        "2": "O una bisca...",
+        "next_node": "bottone_214"
+      }
+    ]
+  },
+  {
+    "id": "bottone_214",
+    "content": [
+      "text: Non so perché, ma qualcosa mi dice che lo incontreremo ancora, nelle nostre indagini.",
+      "text: Non si può mai sapere.",
+      "text: Beh, vuoi... tornare alla tua vacanza, ora?",
+      "text: 😁"
+    ],
+    "choices": [
+      {
+        "0": "Perchè no?",
+        "next_node": "bottone_217"
+      }
+    ]
+  },
+  {
+    "id": "bottone_217",
+    "content": [
+      "text: Caso chiuso, Capo?"
+    ],
+    "choices": [
+      {
+        "0": "Caso chiuso.",
+        "next_node": "bottone_300"
+      }
+    ]
+  }
+]

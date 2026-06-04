@@ -1,0 +1,31 @@
+{
+    "nova_gorica": {
+        "it": {
+            "nodes": "1",
+            "assets": {
+                "audio/vocale_01.mp3": "1",
+                "audio/vocale_02.mp3": "1",
+                "audio/vocale_27a.mp3": "1",
+                "images/nova-gorica-copertina.png": "1",
+                "pdfs/documento.pdf": "1"
+            }
+        },
+        "sl": {
+            "nodes": "1",
+            "assets": {
+                "audio/vocale_01.mp3": "1",
+                "audio/vocale_02.mp3": "1",
+                "audio/vocale_27a.mp3": "1",
+                "images/nova-gorica-copertina.png": "1",
+                "pdfs/documento.pdf": "1"
+            }
+        },
+        "shared_assets": {
+            "shared_images/vocale_01.mp3": "1",
+            "shared_images/vocale_02.mp3": "1",
+            "shared_images/vocale_27a.mp3": "1",
+            "shared_images/nova-gorica-copertina.png": "1",
+            "shared_images/documento.pdf": "1"
+        }
+    }
+}

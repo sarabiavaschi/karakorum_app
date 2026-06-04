@@ -1,0 +1,2 @@
+- nodes_ai_chat -> file (creato da Prawin) da usare per lasciare la conversazione interamente con l'LLM
+- bottoni.json -> file (creato da Prawin) da usare per la conversazione che utilizza dei bottoni predefiniti per guidare l'utente nella chat
